@@ -1,4 +1,6 @@
-# AI Graphic Design Studio
+# iDesigner.ai
+
+![iDesigner.ai — Brand-aware Creative Design Studio](assets/idesigner-ai-wordmark.png)
 
 A single brand-aware design plugin for **Claude Code and OpenAI Codex**. It uses Canva as the primary editable design workspace, supports provider-based image generation through the connected assistant's available tools, and maintains local brand resources and project revision history.
 
@@ -40,7 +42,7 @@ The new skills are available in both Claude Code and Codex through the shared `s
 Keep this directory in a stable location, for example:
 
 ```text
-~/ai-tools/ai-graphic-design-studio
+~/ai-tools/iDesigner.ai
 ```
 
 Do not move `resources/brands` outside the plugin unless you also update `config/studio-config.json`.
@@ -83,10 +85,10 @@ Canva MCP requires each user to authenticate individually. Canva states that som
 Use the local plugin directory:
 
 ```bash
-claude --plugin-dir /absolute/path/to/ai-graphic-design-studio
+claude --plugin-dir /absolute/path/to/iDesigner.ai
 ```
 
-Or add the plugin through your Claude Code plugin marketplace workflow. Restart/reload Claude Code after changing plugin files. The main skill is available as `/ai-graphic-design-studio:graphic-design-studio` when the plugin is loaded.
+Or add the plugin through your Claude Code plugin marketplace workflow. Restart/reload Claude Code after changing plugin files. The main skill is available as `/idesigner-ai:graphic-design-studio` when the plugin is loaded.
 
 ### 5. Install in Codex
 
@@ -156,6 +158,6 @@ Edit `config/studio-config.json` to set the resource directory, default output l
 - [Claude Code plugin structure](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev)
 
 
-## Quality review update (v0.2.2)
+## Quality review in release 1.0.0
 
-The quality reviewer now runs a mandatory semantic content review before visual QA. It checks communication type, audience, single main message, tone, repeated meaning across headings/ribbons/body/footer, personal-vs-institutional voice, and whether each sentence adds value. Personal messages must speak directly to the recipient and must not repeat context already established by the headline or award ribbon. Redundant or audience-inappropriate copy is a hard FAIL, even when the artwork looks polished.
+Release 1.0.0 includes a mandatory semantic content review before visual QA. It checks communication type, audience, single main message, tone, repeated meaning across headings/ribbons/body/footer, personal-vs-institutional voice, and whether each sentence adds value. Personal messages must speak directly to the recipient and must not repeat context already established by the headline or award ribbon. Redundant or audience-inappropriate copy is a hard FAIL, even when the artwork looks polished.
