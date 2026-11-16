@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "iDesigner.ai is a brand-aware creative design plugin for Claude Code and OpenAI Codex, with Canva workflows, poster design, canvas design, algorithmic art, Adobe Express template workflows and brand systems.",
   "icon": "assets/plugin-logo.png",
+  "privacyPolicyUrl": "https://github.com/anilaliaspaul/iDesigner.ai/blob/main/PRIVACY.md",
   "author": {
     "name": "Local workspace"
   }
