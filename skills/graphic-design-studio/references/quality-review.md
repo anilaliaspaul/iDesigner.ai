@@ -1,63 +1,33 @@
 # Quality review checklist
 
-Run this review in two distinct passes: **content/message integrity first, visual/production quality second**. A visually attractive design must fail if its message is redundant, misleading, audience-inappropriate or unclear.
+Run semantic content review first, then visual/reference fidelity and technical production. Mark PASS / FAIL / UNKNOWN with evidence. UNKNOWN is never PASS.
 
-For every applicable item, mark PASS / FAIL / UNKNOWN and record concise evidence or a corrective action. Do not silently skip a failed item.
+## 1. Message purpose and copy
+- Identify communication type, audience, reader response and single main message.
+- Review all copy in reading order; check tone, repetition, factual accuracy and exact supplied wording.
+- Reject invented facts, filler, pseudo-text and unrequested slogans.
 
-## 1. Message purpose, audience and context (mandatory semantic review)
-- Identify the communication type: personal message, institutional announcement, invitation, advertisement, educational notice, celebration, memorial, fundraising appeal or other.
-- Identify the intended audience, primary reader action and desired reader feeling.
-- State the single main message in one sentence. Every headline, subtitle and body paragraph must support it.
-- Review the copy as a complete message in reading order, not as isolated text boxes.
-- Check that the tone, point of view and level of formality fit the audience and communication type.
-- For a personal or individually addressed message (for example, “Dear Student”), write directly to the recipient. Do not repeat institutional context already made clear by the heading.
-- Distinguish recognition from explanation: when the heading already identifies the exam/award and the ribbon says “DISTINCTION HOLDERS”, do not repeat “National Sunday School Grade 10 winners” in the body unless the user explicitly requests it.
-- Detect repeated meaning across headings, subtitles, ribbons, body copy, badges and footers, even when different words are used.
-- Make each sentence add new information, emotion or a useful next step. Remove sentences that merely restate a heading, subtitle, badge, event name or another sentence.
-- Ensure the message has a clear progression: greeting/recognition → concise personal acknowledgement → invitation or next step (if needed) → sender/sign-off.
-- Ensure the sender/sign-off is appropriate and does not duplicate the organization identity unnecessarily.
-- Simulate reading the design once as the intended recipient. Can the reader immediately understand who is speaking, why they are receiving it, what is being celebrated/requested and what to do next?
+## 2. Brand and asset integrity (hard gate)
+- Verify exact official logo source file; compare placed logo to original. Never generate, redraw, trace, retype, approximate, recolour, distort or destructively crop it.
+- Verify exact supplied church exterior and Saint/person image by source path and distinctive visual details.
+- Church check: roof profile, cross, facade, windows, doors, materials and proportions.
+- Saint check: face, halo, vestments, hands, censer/objects and iconography.
+- No generated substitute for any exact supplied asset.
+- No logo backing, oval, panel or border unless reference requires it.
+- If source identity cannot be verified, FAIL or UNKNOWN.
 
-## 2. Copy accuracy and restraint
-- Exact supplied spelling, names, dates, weekdays, times, time zones, venue, price, URL and contact details.
-- No unsupported claims or invented event details.
-- Required legal, sponsor, church or organization wording present exactly as approved.
-- No unrequested slogans, filler, decorative microcopy, redundant labels or duplicate information.
-- Every visual element and every line of copy has a clear purpose. Remove random labels, floating text, fake badges, filler words, arbitrary icons and decorative clutter.
-- On-artwork text is limited to user-provided, user-approved or explicitly requested copy. No invented captions, slogans, quotes, dates, scripture, hashtags, filler or pseudo-text.
+## 3. Reference similarity (hard gate)
+Compare final preview side-by-side with the reference. Assess composition/relative placement, hierarchy/reading path, display typography/effects, palette/background texture, decorative language, image scale, overlap, depth and lighting. Score each user-emphasized dimension 1–5 with evidence. Any score below 4 is FAIL.
 
-## 3. Brand and asset integrity
-- Correct brand selected and profile status active/confirmed.
-- Correct exact logo file from the selected brand folder, unmodified, with clear space, minimum size and contrast. If no approved logo exists, production must stop and request it; no substitute is permitted.
-- Approved palette and typography; fallback fonts disclosed.
-- No unauthorized marks or borrowed brand assets.
-- Generated image assets contain no text, logos, letters, numbers or watermarks.
+When reference typography is distinctive, brand-font defaults do not override it. If exact font is unknown, assess the visual match in letterform character, weight, width, outline, bevel, gradient, extrusion, shadow and ornament. Reject plain generic lettering when the reference uses ornate display type.
 
-## 4. Visual design and language
-- Design is professional, intentional and aligned with the selected brand and approved reference analysis, rather than recognizably generic AI-generated artwork.
-- Strong hierarchy and one clear focal point; typography supports the message instead of shouting over it.
-- Consistent grid, spacing, alignment and margins; generous whitespace where appropriate.
-- Legibility at intended viewing size and mobile preview.
-- Contrast, colour accessibility and no text over visually noisy areas.
-- Mixed Malayalam/English copy preserves exact wording and natural sentence flow; no word splitting, awkward language breaks or detached Malayalam combining marks.
-- Malayalam glyph coverage and shaping are verified in the actual Canva preview and exported file.
-- No clipped text, overlaps, awkward wraps, unintended glyph substitution or low-resolution assets.
-- Images match the intended tone and do not distort real-person identity.
+## 4. Composite quality (hard gate)
+Reject sticker-like treatment: white rectangles, oval mats, crude polygons, jagged edges, white halos, colour fringing, missing robe/halo/smoke details, floating buildings, arbitrary cut-off bases, inconsistent lighting/perspective/scale or detached subjects. If extraction is poor, require proper matting or a designed full-photo treatment.
 
-## 5. Production and export
-- Correct dimensions, aspect ratio and orientation.
-- Print-safe margins and bleed where required.
-- Images suitable for intended output size; 300 DPI target for print where feasible.
-- Correct export format and colour settings where supported.
-- Canva edit link and final export verified.
+## 5. Visual and technical
+- Correct hierarchy, legibility, contrast, safe zones, dimensions, aspect ratio and export.
+- Exact Malayalam/English text and correct shaping/line breaks.
+- Inspect full-size and mobile-size previews, not just metadata.
 
-## 6. Final decision rules
-
-Use the explicit decision: fail the design whenever a semantic, audience-fit or redundancy hard gate fails.
-- **FAIL** the design if it contains avoidable repetition between heading, subtitle, body, badges or footer.
-- **FAIL** a personal message that reads like a generic institutional announcement or repeats the award/exam description instead of speaking directly to the recipient.
-- **FAIL** if the primary message or next action is unclear.
-- **FAIL** if any factual, brand, logo, text-integrity or language-rendering hard gate is violated.
-- **UNKNOWN** is not PASS. State what could not be inspected and request the needed preview, source or confirmation.
-- Never mark an item PASS solely because the design tool returned success. Inspect the preview or relevant metadata.
-- Do not call a design final or production-ready until both the semantic content review and visual/technical review pass.
+## 6. Final decision
+FAIL for wrong logo/church/Saint, substituted assets, reference mismatch, visibly pasted composites or wrong display typography. Never approve solely because a tool returned success. Do not call final until all semantic, brand, reference, composite and technical gates pass.
