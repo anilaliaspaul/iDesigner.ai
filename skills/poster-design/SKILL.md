@@ -1,47 +1,30 @@
 ---
 name: poster-design
-description: Design professional event, campaign and informational posters for print and digital channels with strong hierarchy and exact approved copy.
+description: Create reference-led posters using supplied images, exact copy, coherent image generation, precise finishing and independent QA.
 ---
 
-# Poster Design Skill
+# Poster Design
 
-## Poster-specific process
-1. Confirm the poster's purpose, audience, channel, dimensions, language(s), deadline and required copy.
-2. Audit brand assets. If the official logo is missing, stop and request it before production.
-3. Establish a content hierarchy: primary title, essential event/detail block, supporting information, and CTA only when supplied or approved.
-4. Choose a single visual concept and composition. Use a grid, deliberate negative space, strong contrast and restrained typography.
-5. Present 2–3 structurally distinct directions before production unless the user explicitly waives concept selection.
-6. Build the poster in Canva as editable elements when Canva is connected; otherwise use a supported editable vector/HTML workflow and disclose limitations.
-7. Proofread all copy character-by-character, check safe zones/bleed, and inspect the exported image at phone size and print size.
+## Intake
+Inspect all uploaded references, assets and copy. Determine output dimensions, platform, audience and purpose. Ask only for missing essentials. Classify images as style reference, composition reference, exact logo, exact subject, photo/background or content reference.
 
-## Poster rules
-- Never invent date, time, venue, organiser, sponsor, scripture, price, URL or contact details.
-- Do not add decorative microcopy, random captions, hashtags, fake seals, pseudo-writing or AI-generated text.
-- One focal point; one clear reading path; normally no more than two font families.
-- Keep Malayalam words and English phrases intact. Never split a word to fit a line. Adjust layout or request approved shorter copy.
-- Use only approved photos and assets. Preserve real-person identity and image permissions.
-- Official logo asset is mandatory when the selected brand requires one; missing logo blocks production.
+## Art direction
+When a reference is supplied, analyse and preserve its composition, hierarchy, visual density, palette, background, lighting, typography treatment, ornament and image depth. Replace only the elements the user asks to replace. Do not turn a rich illustrated festival poster into a minimalist card layout.
+
+## Production route
+- Use image-generation-first for expressive, illustrated, layered or atmospheric posters.
+- Use editable-design-first for text-heavy, schedule-driven or repeated template posters.
+- Use hybrid for artistic imagery plus exact text and logos: generate the artwork, then finish with exact logo and editable typography.
+- Discover available tools at runtime. Never assume provider availability.
+
+## Asset rules
+Use exact supplied logo and identity assets. Do not generate substitutes. Image generation can reinterpret references, so inspect output. For a pixel-identical logo, place the original file unchanged in the finishing stage. Integrate subjects naturally; no crude cut-and-paste, sticker edges or arbitrary white panels.
+
+## Typography and copy
+Reference display style takes priority for titles, anniversary numerals and decorative ribbons. Brand fonts are defaults only when no reference typography is supplied. Keep all user text verbatim. For Malayalam, verify shaping, glyphs, conjuncts and diacritics in the export. If generated text is unreliable, leave clean space and add text separately.
+
+## Poster QA
+Compare side-by-side with reference. Verify composition, hierarchy, exact assets, integrated scene, exact copy, typography, dimensions and legibility. Wrong logo/subject or poor reference similarity is FAIL. UNKNOWN is not PASS.
 
 ## Deliverables
-Provide platform/print dimensions, editable source link where available, export file(s), and a concise QA checklist.
-
-
-## Reference-image and print-card learnings
-
-- If the user supplies a reference image containing wording but no separate copy, transcribe the visible text from the reference and flag uncertain portions rather than inventing replacements.
-- If the physical poster/card size is not supplied and print dimensions materially affect layout, ask for the exact size before production.
-- Classify each uploaded image by role: style reference, exact background photograph, logo, subject asset or text source. If the user requests the exact photo as a background, use that photo rather than a generated lookalike.
-- For coordinated front/back cards, match palette, border, typography character, dimensions, orientation, image treatment and print setup.
-- For 10 × 15 cm print at 300 DPI, target approximately 1181 × 1772 px. Check safe margins and printer-specific bleed separately.
-- Keep long copy readable through layout, spacing and line length. If it does not fit, recommend shorter copy or a larger format rather than silently dropping text or shrinking it excessively.
-- Use image generation for visual artwork/backgrounds, not long exact paragraphs or event details. Add final copy as editable, accurately typeset text.
-
-## Mandatory QA and approval gate
-
-- After every complete poster/card render and every material revision, run the independent Quality Reviewer against the actual rendered preview and export where available.
-- QA must compare every visible word, punctuation mark, date, number, logo and supplied asset against the approved brief and sources.
-- QA must return PASS / FAIL / UNKNOWN with evidence. Any critical/major defect or critical UNKNOWN blocks approval.
-- Fix blocking issues and rerun QA. Do not ask the user to approve a failed or unverified design.
-- Only after QA PASS, show the preview and QA summary and ask for explicit user approval.
-- If the user requests changes, revise and rerun QA.
-- After explicit user approval, ask separately whether the user wants the design opened in Canva. Open Canva only after an affirmative response.
+Provide preview, export, dimensions, editable source link when available, asset provenance and concise QA report. Do not claim final approval until the user approves.

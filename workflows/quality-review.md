@@ -1,61 +1,14 @@
-# Quality Review and Approval Gate
+# Quality Review
 
-This workflow is mandatory for every newly created design and every material revision. It is orchestrated by `skills/graphic-design-studio/SKILL.md` and executed by the independent `skills/quality-reviewer/SKILL.md`. Read `skills/graphic-design-studio/references/quality-review.md` as the detailed checklist.
+This workflow is orchestrated by `skills/graphic-design-studio/SKILL.md`. Read the corresponding specialist reference under `skills/graphic-design-studio/references/` before acting. Preserve the selected brand rules, supplied facts and version history. Canva is the primary editable design surface.
 
-## Required lifecycle
+## Mandatory review order
+1. **Understand the message:** classify the communication type, audience, desired reader response and single main message.
+2. **Read all copy as one message:** inspect headline, subtitle, ribbon, body, labels and sign-off in reading order.
+3. **Remove repetition:** detect duplicated meaning even when different words are used. A heading plus award ribbon may already establish the achievement; do not restate it in the body without a clear reason.
+4. **Check audience voice:** personal messages must address the individual directly; institutional announcements may use institutional voice. Do not mix the two accidentally.
+5. **Check usefulness:** every sentence must add new information, emotion or a next step. Remove filler and over-explanation.
+6. **Review facts, brand, language, visual design and production details** using `skills/graphic-design-studio/references/quality-review.md`.
+7. **Fail closed:** if semantic review fails, revise copy before approving visual polish. A beautiful layout does not compensate for poor communication.
 
-```text
-Create or revise design
-        |
-        v
-Inspect actual rendered preview/export
-        |
-        v
-Run independent QA
-        |
-        +---- FAIL or UNKNOWN ----> Correct defects ----> Render again ----> Full QA again
-        |
-        v
-QA PASS
-        |
-        v
-Show preview + QA summary to user
-        |
-        v
-Ask: "Do you approve this design?"
-        |
-        +---- No / changes requested ----> Revise ----> Render again ----> Full QA again
-        |
-        v
-User explicitly approves
-        |
-        v
-Ask: "Would you like me to open this design in Canva?"
-        |
-        +---- No ----> Do not open Canva; continue with agreed deliverables
-        |
-        v
-User explicitly agrees
-        |
-        v
-Open the exact verified Canva design URL using the connected Canva/open-URL capability
-```
-
-## QA execution rules
-
-1. Invoke the Quality Reviewer skill after the first complete render. Do not ask the user to approve before QA.
-2. The reviewer must inspect the actual rendered artifact, not only a design prompt, source code, textual description or tool success message.
-3. Run semantic/message review first, exact-copy and fact verification second, brand/assets third, visual/accessibility fourth, and technical/export checks fifth.
-4. Require explicit PASS / FAIL / UNKNOWN results with evidence. A critical UNKNOWN blocks approval.
-5. If QA returns FAIL or UNKNOWN, do not show the design as approval-ready. Fix defects, create a new version and rerun the full QA process.
-6. After QA PASS, show the actual preview and a concise QA report. State any accepted minor limitations. Then ask for explicit user approval.
-7. If the user requests changes or declines approval, revise only the requested elements, preserve approved elements, and rerun QA on the revised version.
-8. User approval must be explicit. Silence, positive comments about one element, or a request to see a preview do not count as approval.
-9. Only after explicit user approval, ask separately whether the user wants the design opened in Canva. Do not combine this with the approval question.
-10. If the user agrees, open the exact Canva design URL returned by the connected tool. If no valid Canva URL or open capability exists, explain the limitation and provide the verified edit URL if available. Never invent a link.
-11. If the user declines, do not launch Canva or perform an equivalent automatic handoff.
-12. Record QA decision, evidence, defects, fixes, version, user approval and Canva handoff choice in the project record.
-
-## Mandatory QA decision
-
-Return PASS / FAIL / UNKNOWN. A visually attractive design must fail if its message is redundant, unclear, misleading, factually wrong, brand-inconsistent or unsuitable for its audience. UNKNOWN is not PASS. Preserve all user-approved wording and factual details; never invent replacement claims.
+Return PASS / FAIL / UNKNOWN with evidence and concrete fixes. Preserve all user-approved wording and factual details; do not invent replacement claims.

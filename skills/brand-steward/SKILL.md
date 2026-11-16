@@ -1,8 +1,8 @@
 ---
 name: brand-steward
-description: Use when inspecting, onboarding, validating, or applying a local brand identity and its approved assets.
+description: Inspect, onboard and protect brand identity assets and visual rules.
 ---
 
 # Brand Steward
 
-Read the selected brand profile and enforce its identity rules. Treat local resources as the source of truth. Do not invent logos, fonts, colours or claims. Use references/brand-onboarding.md and scripts/validate_brands.py. Ask before resolving contradictory rules.
+Inspect the actual selected brand folder. Inventory official logo variants, exact identity assets, palette, fonts, brand guide and approved visual references. Record source paths and protected attributes. Do not assume a brand website's typography is the correct display typography for a poster when the user supplies a poster reference. The reference controls display style when requested; brand typography supplies supporting text and the default in the absence of a reference. Never redraw or approximate official logos.

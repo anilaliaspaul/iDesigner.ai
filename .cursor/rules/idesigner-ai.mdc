@@ -1,0 +1,6 @@
+---
+description: iDesigner.ai shared creative studio rules for design, image, brand, poster, invitation and visual QA tasks
+alwaysApply: false
+---
+
+For any design or visual production task, read `AGENTS.md` and load `skills/graphic-design-studio/SKILL.md` first. Load relevant specialist skills from `skills/`. Preserve reference fidelity, exact copy, official logos and identity assets. Ask for missing fixed-canvas dimensions. Run independent QA against the actual output. Never claim unavailable tools or unconfirmed exports. Canva is a post-approval handoff only when connected.

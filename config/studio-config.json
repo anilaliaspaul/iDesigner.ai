@@ -9,59 +9,96 @@
   ],
   "default_digital_dpi": 144,
   "print_dpi": 300,
+  "production_modes": {
+    "auto_select": true,
+    "primary_objective": "reference-led artistic image generation",
+    "image_generation_first_for_visual_artwork": true,
+    "editable_design_first_for_text_heavy_or_repeated_templates": true,
+    "hybrid_for_artwork_with_exact_copy_and_logos": true,
+    "canva_is_mandatory_after_qa_and_user_approval": true,
+    "never_force_canva_as_initial_artwork_renderer": true
+  },
   "image_generation": {
     "mode": "provider-adaptive",
     "preferred_provider": "auto",
-    "never_embed_credentials": true
+    "use_uploaded_references": true,
+    "generate_complete_composition_when_supported": true,
+    "never_embed_credentials": true,
+    "never_assume_provider_or_tool_availability": true
+  },
+  "asset_integrity": {
+    "require_asset_inventory": true,
+    "protect_official_logo": true,
+    "preserve_uploaded_identity_assets": true,
+    "no_unapproved_substitutes": true,
+    "allow_reference_guided_artistic_integration": true,
+    "require_manual_exact_asset_finish_when_needed": true
+  },
+  "typography": {
+    "reference_display_style_has_priority": true,
+    "brand_fonts_default_without_reference": true,
+    "keep_copy_verbatim": true,
+    "require_script_shaping_review": true,
+    "supported_languages": [
+      "en",
+      "ml"
+    ]
   },
   "canva": {
     "mcp_server_name": "canva",
     "remote_mcp_url": "https://api.canva.com/connect/v1/mcp",
-    "prefer_brand_templates": true,
-    "require_approval_before_committing_existing_design_edits": true
+    "enabled_when_connected": true,
+    "mandatory_after_pre_canva_qa_pass_and_explicit_user_approval": true,
+    "create_new_editable_design_from_approved_artwork": true,
+    "preserve_original_approved_artwork_as_reference_or_background_layer": true,
+    "rebuild_text_as_editable_text_elements": true,
+    "place_logos_and_uploaded_assets_as_separate_image_elements": true,
+    "recreate_shapes_and_decorative_elements_as_editable_layers_when_practical": true,
+    "verify_canva_preview_against_approved_artwork": true,
+    "require_post_canva_qa": true,
+    "return_canva_edit_url": true,
+    "never_claim_fully_layer_editable_if_artwork_is_flattened": true,
+    "require_approval_before_committing_edits_to_existing_designs": true
   },
   "iteration": {
     "preserve_previous_versions": true,
     "require_explicit_final_approval": true,
     "max_initial_concepts": 3
   },
-  "design_quality": {
-    "default_style": "minimalist-editorial",
-    "visual_density": "low",
-    "whitespace": "generous",
-    "max_font_families": 2,
-    "allow_unrequested_text": false,
-    "allow_generated_logo": false,
-    "require_official_logo_before_production": true,
-    "require_copy_verbatim": true,
-    "supported_languages": [
-      "en",
-      "ml"
-    ],
-    "require_malayalam_shaping_review": true,
-    "avoid": [
-      "random-floating-text",
-      "fake-labels",
-      "decorative-microcopy",
-      "generic-ai-flourishes",
-      "unrequested-icons",
-      "cluttered-collages",
-      "gratuitous-effects"
-    ]
+  "quality": {
+    "independent_qa_required": true,
+    "require_reference_comparison": true,
+    "require_actual_preview_and_export_inspection": true,
+    "require_spelling_grammar_punctuation_and_sentence_review": true,
+    "require_exact_copy_and_fact_check": true,
+    "require_unwanted_ai_text_and_pseudo_text_detection": true,
+    "require_ai_image_artifact_and_visual_anomaly_detection": true,
+    "require_visual_composition_and_asset_fidelity_review": true,
+    "require_post_canva_reconstruction_qa": true,
+    "unknown_is_not_pass": true,
+    "automatic_fail_on_wrong_logo_or_required_asset": true,
+    "do_not_silently_rewrite_user_copy": true,
+    "require_user_approval_after_qa_pass": true
   },
   "design_capabilities": {
-    "canva": {
-      "enabled_when_connected": true,
-      "primary_editable_renderer": true
-    },
-    "adobe_express_templates": {
-      "enabled_when_connector_available": true,
-      "require_explicit_template_selection": true
-    },
     "canvas_design": true,
     "poster_design": true,
     "algorithmic_art": true,
     "brand_guidelines": true,
-    "skill_collection_index": "skills/graphic-design-skills-collection/references/upstream-skill-catalog.md"
+    "adobe_express_templates": {
+      "enabled_when_connector_available": true,
+      "require_explicit_template_selection": true
+    }
+  },
+  "specialist_orchestration": {
+    "retain_all_existing_skills": true,
+    "retain_all_existing_agents": true,
+    "use_creative_director_for_art_direction": true,
+    "use_brand_steward_for_brand_and_asset_audit": true,
+    "use_image_specialist_for_generation_and_asset_integration": true,
+    "use_layout_typography_for_copy_and_layout": true,
+    "use_iteration_manager_for_revisions": true,
+    "use_quality_reviewer_as_independent_gate": true,
+    "route_algorithmic_art_canvas_design_adobe_templates_and_skill_collection_when_relevant": true
   }
 }
