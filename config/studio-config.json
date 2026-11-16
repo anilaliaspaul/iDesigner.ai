@@ -1,0 +1,67 @@
+{
+  "studio_name": "iDesigner.ai",
+  "brands_directory": "resources/brands",
+  "shared_resources_directory": "resources/shared",
+  "projects_directory": "output/projects",
+  "default_export_formats": [
+    "png",
+    "pdf"
+  ],
+  "default_digital_dpi": 144,
+  "print_dpi": 300,
+  "image_generation": {
+    "mode": "provider-adaptive",
+    "preferred_provider": "auto",
+    "never_embed_credentials": true
+  },
+  "canva": {
+    "mcp_server_name": "canva",
+    "remote_mcp_url": "https://api.canva.com/connect/v1/mcp",
+    "prefer_brand_templates": true,
+    "require_approval_before_committing_existing_design_edits": true
+  },
+  "iteration": {
+    "preserve_previous_versions": true,
+    "require_explicit_final_approval": true,
+    "max_initial_concepts": 3
+  },
+  "design_quality": {
+    "default_style": "minimalist-editorial",
+    "visual_density": "low",
+    "whitespace": "generous",
+    "max_font_families": 2,
+    "allow_unrequested_text": false,
+    "allow_generated_logo": false,
+    "require_official_logo_before_production": true,
+    "require_copy_verbatim": true,
+    "supported_languages": [
+      "en",
+      "ml"
+    ],
+    "require_malayalam_shaping_review": true,
+    "avoid": [
+      "random-floating-text",
+      "fake-labels",
+      "decorative-microcopy",
+      "generic-ai-flourishes",
+      "unrequested-icons",
+      "cluttered-collages",
+      "gratuitous-effects"
+    ]
+  },
+  "design_capabilities": {
+    "canva": {
+      "enabled_when_connected": true,
+      "primary_editable_renderer": true
+    },
+    "adobe_express_templates": {
+      "enabled_when_connector_available": true,
+      "require_explicit_template_selection": true
+    },
+    "canvas_design": true,
+    "poster_design": true,
+    "algorithmic_art": true,
+    "brand_guidelines": true,
+    "skill_collection_index": "skills/graphic-design-skills-collection/references/upstream-skill-catalog.md"
+  }
+}

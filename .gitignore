@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+.pytest_cache/
+output/projects/**/assets/private/
+output/projects/**/final/*

@@ -1,0 +1,8 @@
+{
+  "fonts": [],
+  "languages_supported": [
+    "en",
+    "ml"
+  ],
+  "notes": "Record font family, style, weight, filename, license/source and Malayalam shaping verification."
+}

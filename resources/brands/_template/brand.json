@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "slug": "brand-slug",
+  "name": "Brand Name",
+  "description": "Short description of the organization or brand.",
+  "status": "draft",
+  "industry": "",
+  "website": "",
+  "voice": [
+    "clear",
+    "welcoming"
+  ],
+  "palette_file": "palette/palette.json",
+  "logo_assets": {
+    "primary": "logos/primary.svg",
+    "monochrome": null,
+    "reversed": null,
+    "icon_only": null
+  },
+  "typography": {
+    "display": {
+      "family": "",
+      "file": null,
+      "weight": "",
+      "notes": ""
+    },
+    "heading": {
+      "family": "",
+      "file": null,
+      "weight": "",
+      "notes": ""
+    },
+    "body": {
+      "family": "",
+      "file": null,
+      "weight": "",
+      "notes": ""
+    },
+    "fallback": "",
+    "language_support": {
+      "languages": [
+        "en",
+        "ml"
+      ],
+      "scripts": {
+        "en": "Latin",
+        "ml": "Malayalam"
+      },
+      "fonts": {
+        "malayalam": {
+          "family": "",
+          "files": [],
+          "weights": [],
+          "verified_shaping": false
+        },
+        "english": {
+          "family": "",
+          "files": [],
+          "weights": [],
+          "verified_shaping": true
+        }
+      },
+      "mixed_language_rules": "Preserve full phrases and natural sentence flow. Never split words or detach Malayalam combining marks."
+    }
+  },
+  "logo_rules": {
+    "do_not_modify": true,
+    "clear_space": "",
+    "minimum_size": "",
+    "backgrounds": ""
+  },
+  "design_rules": {
+    "preferred_styles": [
+      "minimalist",
+      "editorial",
+      "restrained",
+      "high-whitespace"
+    ],
+    "avoid": [
+      "Cluttered AI-generated poster aesthetics",
+      "Random decorative text, labels or filler",
+      "Unrequested slogans, captions or pseudo-text",
+      "Broken Malayalam or English sentence wrapping"
+    ],
+    "photography": "",
+    "illustration": ""
+  },
+  "required_disclaimers": [],
+  "last_reviewed": null
+}
