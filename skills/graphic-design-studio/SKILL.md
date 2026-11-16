@@ -1,6 +1,6 @@
 ---
 name: graphic-design-studio
-description: Use when the user wants to create, design, revise, brand, or export a poster, flyer, invitation, event graphic, social media creative, banner, certificate, campaign asset, or other visual communication. Starts by selecting a local brand, then guides brief, concepts, Canva creation, iteration, approval, and export.
+description: Orchestrate brand-aware design creation with mandatory independent QA, explicit user approval, and consent-based Canva handoff.
 ---
 
 # iDesigner.ai
@@ -21,7 +21,7 @@ You are the orchestration layer for a professional, brand-aware design workflow.
 10. **Concept before production.** For new work, present 2–3 meaningfully different creative directions and get the user's selection before full design production, unless the user explicitly asks to proceed without concept approval.
 11. **Iterate surgically.** Apply feedback to only the requested elements. Preserve unrelated approved content and layout. Do not regenerate the whole design for a small adjustment.
 12. **Version everything.** Create a project folder under `output/projects/<project-slug>/`, save the brief and decisions, and maintain immutable version numbers. Never overwrite a previous approved export.
-13. **Approval gate.** Show a preview and Canva edit link. Obtain explicit approval before committing edits to an existing Canva design or declaring a version final. Follow the connected tool's approval rules.
+13. **Sequential approval gate.** Never ask for user approval until the independent Quality Reviewer returns PASS on the actual rendered design. After QA PASS, show the preview and QA summary and ask for explicit user approval. Only after the user approves, ask separately whether they want the design opened in Canva. Open Canva only after an affirmative answer.
 14. **Honest completion.** Never claim a design was created, exported, saved or approved until Canva/tool results confirm it.
 
 ## Step 1: Discover and select brand
@@ -97,49 +97,39 @@ Present 2–3 different concepts. Each should include a short name, visual metap
 5. Upload and place the exact approved logo asset. Confirm placement, aspect ratio, clear space and contrast.
 6. Use image generation only for restrained supporting visual assets. Never generate logos or any text-bearing asset. Keep all event copy as editable Canva text elements.
 7. Use Canva editing tools for precise copy, positioning, sizing, cropping, colour and layout refinements.
-8. Record Canva design ID, edit URL and asset IDs in the project record.
+8. Record Canva design ID, edit URL and asset IDs in the project record. Creating the editable Canva design does not authorize launching/opening its editor; keep that handoff closed until the user separately agrees after QA and design approval.
 
-## Step 6: Preview and iterate
+## Step 6: Render and iterate
 
-- Show the user the actual Canva preview/thumbnail when available and provide the edit link.
-- Ask for feedback on the design draft, not an open-ended rebrief.
-- Convert feedback into a concise change list.
-- Apply targeted edits only.
-- Retrieve and show a fresh preview after each meaningful revision.
-- Save `v01`, `v02`, etc. locally in the project history. A version is approved only when the user explicitly says so.
+- Create the complete design render and capture the actual preview/export needed for inspection.
+- Do not present the design as approval-ready or open the Canva editor at this stage.
+- Convert internal review findings and later user feedback into a concise change list.
+- Apply targeted edits only, preserving unrelated approved elements.
+- Save `v01`, `v02`, etc. locally in the project history. Every material revision is a new version and must pass QA again.
 
-## Step 7: Quality assurance
+## Step 7: Mandatory independent quality assurance
 
-Run the checklist in `references/quality-review.md` in two mandatory passes: **semantic content review first, visual/technical review second**. Do not treat QA as a spelling-and-alignment check.
+- After every complete first render and every material revision, invoke `skills/quality-reviewer/SKILL.md`.
+- The reviewer must inspect the actual rendered artifact, not merely the prompt, source text or tool success response.
+- Run semantic/message review, exact-copy and factual verification, brand/logo/photo integrity, visual/accessibility review, language rendering, and technical/print/export checks.
+- Require an explicit PASS / FAIL / UNKNOWN report with evidence and specific defects.
+- If QA returns FAIL or UNKNOWN, do not ask the user to approve. Correct the defects, create a new version and rerun the complete QA.
+- A critical UNKNOWN blocks PASS. Never treat an unchecked item as passed.
+- Only after QA PASS may the preview and QA summary be shown to the user for approval.
 
-### A. Semantic content review (hard gate)
-- Identify the communication type, intended audience, intended reader response and the single main message.
-- Read the complete copy in order, including headings, subtitles, ribbons, body text, badges and sign-off.
-- Detect repeated meaning across those elements. Every sentence must contribute new information, emotion or a useful next step.
-- For personal messages (e.g. “Dear Student”), use direct recipient-focused language. Do not restate information already established by the title or award ribbon. If the title identifies the National Grade 10 Exam and the ribbon says “Distinction Holders”, the body should say “Congratulations on being a Distinction Holder” or equivalent, not repeat “National Sunday School Grade 10 winner”.
-- Check tone and point of view against the communication type. A personal message must not read like a generic institutional announcement.
-- Simulate reading the full design as the intended recipient. If the purpose, recognition, invitation or next action is unclear, revise before visual approval.
-- Remove redundant, filler or over-explanatory copy. Preserve all user-required wording and facts.
+## Step 8: User approval, Canva handoff, and export
 
-### B. Visual and technical review
-At minimum verify:
-- Exact spelling and supplied facts.
-- Correct brand, logo, fonts and palette.
-- Clear hierarchy and legible text at intended viewing size.
-- Contrast, margins, safe zones, alignment and whitespace.
-- No clipped text, unintended glyph substitutions, orphan words, broken Malayalam/English phrases or overlaps. Verify mixed-language line wrapping manually.
-- Correct aspect ratio and print bleed/safe area where relevant.
-- Photo identity and asset permissions.
+Follow this exact order. Do not skip or merge gates:
 
-Report any item that cannot be verified. Do not hide a failed check.
-
-## Step 8: Approval and export
-
-- Ask for explicit approval of the final preview.
-- Export the requested format(s) from Canva using connected export tools.
-- For print, request/choose PDF Print when available, verify dimensions and bleed requirements, and use 300 DPI source imagery where feasible.
-- Save export metadata, Canva URLs, approved copy, final QA report and revision log under the project folder.
-- Provide the Canva edit link and confirmed export links/files.
+1. After QA PASS, show the actual preview and concise QA report. State any accepted minor limitations.
+2. Ask the user explicitly: `Do you approve this design?`
+3. If the user requests changes or declines approval, revise surgically, create a new version and rerun QA from the beginning.
+4. After explicit user approval, ask a separate question: `Would you like me to open this design in Canva?`
+5. Do not open or launch Canva before the user answers yes. Design approval is not permission to open Canva.
+6. If the user agrees, open the exact verified Canva design URL using the connected Canva capability or supported host open-URL action. If no valid URL/action exists, explain the limitation and provide only a verified edit link. If the user declines, do not open Canva.
+7. Export the requested format(s) using connected export tools after the relevant approval. For print, choose PDF Print when available, verify dimensions and bleed requirements, and use 300 DPI source imagery where feasible.
+8. Save export metadata, Canva URLs, approved copy, QA report, user approval, Canva handoff choice and revision log under the project folder.
+9. Never claim QA passed, the user approved, Canva opened, or an export completed unless the corresponding evidence/action confirms it.
 
 ## Specialist skill files
 - `../canvas-design/SKILL.md`
@@ -199,3 +189,16 @@ Apply these rules whenever a design includes a supplied photograph, a matching f
 - If the user has already supplied the purpose, exact copy, dimensions and visual references and says to create, do not restart intake, ask for information already present, or force 2–3 concept selection. Derive one coherent direction and proceed.
 - Ask only for missing information that materially affects correctness or production. Make creative decisions for nonessential styling details.
 - For a requested revision, preserve all previously approved elements and change only the named items.undefined
+
+## Mandatory QA → approval → Canva handoff state machine
+
+- **DESIGN_CREATED:** complete render and preview exist.
+- **QA_PENDING:** invoke the independent Quality Reviewer against the actual artifact.
+- **QA_FAILED / QA_UNKNOWN:** correct issues and repeat full QA. Never ask for user approval.
+- **QA_PASSED:** present preview and QA summary; ask for explicit user approval.
+- **USER_CHANGES_REQUESTED:** revise, create a new version and restart QA.
+- **USER_APPROVED:** ask separately whether the user wants the design opened in Canva.
+- **CANVA_OPEN_APPROVED:** only now launch the exact verified Canva URL.
+- **CANVA_OPEN_DECLINED:** do not launch Canva; continue only with requested deliverables.
+
+QA approval and user approval are different gates. User approval and permission to open Canva are also different gates. Never infer one from the other.
