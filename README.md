@@ -88,11 +88,32 @@ Use the local plugin directory:
 claude --plugin-dir /absolute/path/to/iDesigner.ai
 ```
 
-Or add the plugin through your Claude Code plugin marketplace workflow. Restart/reload Claude Code after changing plugin files. The main skill is available as `/idesigner-ai:graphic-design-studio` when the plugin is loaded.
+To install directly from GitHub through the plugin marketplace, run:
+
+```bash
+/plugin marketplace add anilaliaspaul/iDesigner.ai
+/plugin install idesigner-ai@idesigner-ai
+```
+
+For an offline/local installation, use the local directory with `--plugin-dir` as above. Restart/reload Claude Code after changing plugin files. The main skill is available as `/idesigner-ai:graphic-design-studio` when the plugin is loaded.
 
 ### 5. Install in Codex
 
-For a repository-scoped install, copy this folder into the repository's plugin source or add it to a local plugin marketplace. The portable root `plugin.json` is the preferred manifest; `.codex-plugin/plugin.json` is included as a compatibility fallback.
+The repository includes a Codex marketplace at `.agents/plugins/marketplace.json`, so it can be installed directly from GitHub without copying it into a date-specific workspace:
+
+```bash
+codex plugin marketplace add anilaliaspaul/iDesigner.ai --ref main
+codex plugin add idesigner-ai --marketplace idesigner-ai
+```
+
+For a local installation, add the stable plugin folder as the marketplace source, then install it:
+
+```bash
+codex plugin marketplace add /absolute/path/to/iDesigner.ai
+codex plugin add idesigner-ai --marketplace idesigner-ai
+```
+
+The portable root `plugin.json` is the preferred manifest; `.codex-plugin/plugin.json` is included as a compatibility fallback. The plugin cache is managed by Codex and should not be edited.
 
 For local skill-only use, copy `skills/graphic-design-studio/` into your project's `.agents/skills/graphic-design-studio/` folder. The skill remains useful without Canva MCP, but Canva actions will be unavailable until connected.
 

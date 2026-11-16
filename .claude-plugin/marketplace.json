@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "idesigner-ai",
+  "description": "iDesigner.ai plugin marketplace for Claude Code.",
+  "plugins": [
+    {
+      "name": "idesigner-ai",
+      "description": "Brand-aware creative design studio for Claude Code and Codex.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/anilaliaspaul/iDesigner.ai"
+    }
+  ]
+}

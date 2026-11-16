@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developers.openai.com/plugins/marketplace.schema.json",
+  "name": "idesigner-ai",
+  "interface": {
+    "displayName": "iDesigner.ai"
+  },
+  "plugins": [
+    {
+      "name": "idesigner-ai",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
