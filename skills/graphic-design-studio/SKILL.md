@@ -198,5 +198,4 @@ Apply these rules whenever a design includes a supplied photograph, a matching f
 ### Fast path for a clear brief
 - If the user has already supplied the purpose, exact copy, dimensions and visual references and says to create, do not restart intake, ask for information already present, or force 2–3 concept selection. Derive one coherent direction and proceed.
 - Ask only for missing information that materially affects correctness or production. Make creative decisions for nonessential styling details.
-- For a requested revision, preserve all previously approved elements and change only the named items.
-
+- For a requested revision, preserve all previously approved elements and change only the named items.undefined
