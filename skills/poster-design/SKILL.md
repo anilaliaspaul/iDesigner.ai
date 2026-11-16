@@ -6,21 +6,27 @@ description: Design professional event, campaign and informational posters for p
 # Poster Design Skill
 
 ## Poster-specific process
-1. Confirm the poster's purpose, audience, channel, dimensions, language(s), deadline and required copy.
-2. Audit brand assets. If the official logo is missing, stop and request it before production.
-3. Establish a content hierarchy: primary title, essential event/detail block, supporting information, and CTA only when supplied or approved.
-4. Choose a single visual concept and composition. Use a grid, deliberate negative space, strong contrast and restrained typography.
-5. Present 2–3 structurally distinct directions before production unless the user explicitly waives concept selection.
-6. Build the poster in Canva as editable elements when Canva is connected; otherwise use a supported editable vector/HTML workflow and disclose limitations.
-7. Proofread all copy character-by-character, check safe zones/bleed, and inspect the exported image at phone size and print size.
+1. Confirm purpose, audience, channel, dimensions, languages, deadline and exact copy.
+2. Audit brand assets and identify the exact logo, subject images and reference designs.
+3. Read `../graphic-design-studio/references/reference-faithful-production.md` before production.
+4. Classify each supplied reference as style, composition, asset or content reference. When the user asks for the same style or a replacement within the reference, treat it as a design specification, not loose inspiration.
+5. Lock each required asset to its exact source path. Never substitute an AI-generated lookalike.
+6. Use reference display typography first when a reference exists. Use brand-kit fonts as the default only when there is no reference typography or the user explicitly asks for brand fonts.
+7. Build the composition around the actual assets. Do not generate substitutes and do not paste crude cutouts onto a finished background.
+8. Use Canva or another suitable editable design/compositing tool. If the renderer cannot perform accurate masking, blending or typography effects, disclose the limitation and choose a supported alternative.
+9. Proofread all copy character-by-character and inspect the actual preview at phone and full size.
+10. Run reference-fidelity, asset-integrity and composite-quality QA before presenting the draft.
 
 ## Poster rules
-- Never invent date, time, venue, organiser, sponsor, scripture, price, URL or contact details.
-- Do not add decorative microcopy, random captions, hashtags, fake seals, pseudo-writing or AI-generated text.
-- One focal point; one clear reading path; normally no more than two font families.
-- Keep Malayalam words and English phrases intact. Never split a word to fit a line. Adjust layout or request approved shorter copy.
-- Use only approved photos and assets. Preserve real-person identity and image permissions.
-- Official logo asset is mandatory when the selected brand requires one; missing logo blocks production.
+- Never invent dates, times, venues, organisers, sponsors, scripture, prices, URLs or contact details.
+- Do not add unrequested captions, hashtags, fake seals, pseudo-writing or AI-generated text.
+- Composition density must follow the supplied reference. Do not impose minimalist styling on an ornate or layered festival reference.
+- Keep Malayalam words and English phrases intact. Never split a word or detach Malayalam marks.
+- Use only approved photos and assets. Preserve identity and defining details.
+- The exact official logo is mandatory. Never generate, redraw, trace, retype, recolour, distort or approximate it.
+- Never generate a replacement for a supplied church exterior, Saint image or other exact asset.
+- A raw cutout with white edges, a rectangle, oval mat or sticker-like shadow is not a finished composite unless the reference explicitly uses that treatment.
+- If extraction is poor, use a designed full-photo treatment or ask for a better source. Do not approve a bad cutout.
 
 ## Deliverables
-Provide platform/print dimensions, editable source link where available, export file(s), and a concise QA checklist.
+Provide dimensions, editable source where available, export files, asset provenance and QA findings including reference similarity.
