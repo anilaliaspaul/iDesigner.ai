@@ -24,3 +24,16 @@ description: Design professional event, campaign and informational posters for p
 
 ## Deliverables
 Provide platform/print dimensions, editable source link where available, export file(s), and a concise QA checklist.
+
+## Dense-copy cards and coordinated front/back artwork
+
+- For greeting cards, parish letters, invitations and other text-heavy print pieces, proofread the complete copy before layout when proofreading is requested. Preserve the author's meaning, facts and voice; do not silently rewrite approved wording.
+- If the user supplies a reference image containing wording but no separate copy, transcribe the visible text from the reference and flag uncertain portions rather than inventing replacements.
+- Lock approved copy before production. Do not use image generation to render long paragraphs or exact event details. Prepare the background artwork separately and add all text as editable, accurately typeset elements.
+- When a front page is supplied as the style reference for a back page, match its palette, border, winter/seasonal treatment, typography character, ornament style, dimensions and print setup. The back can be quieter to accommodate the message while remaining visually related.
+- When a supplied photo is explicitly requested as the background, use that exact photo. Do not substitute a generated approximation of the church, building, person or other identity-critical subject.
+- For a 10 × 15 cm print, target 1181 × 1772 px at 300 DPI. Calculate other physical sizes from the agreed dimensions; include safe margins and printer-specified bleed.
+- For long messages, prioritize readable type, paragraph spacing, line length and whitespace. If the copy does not fit comfortably, recommend a shorter message or larger card rather than compressing the typography.
+- Final text QA must compare every visible word, punctuation mark, date and signature against the locked copy. Inspect at full resolution and at actual print size; reject any missing, extra, duplicated, distorted or pseudo-text.
+- Do not add unrequested crosses, crests, church emblems, decorative captions or other marks. Use only the exact approved identity assets.
+
