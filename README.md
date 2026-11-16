@@ -4,11 +4,15 @@
 
 A single brand-aware design plugin for **Claude Code and OpenAI Codex**. It uses Canva as the primary editable design workspace, supports provider-based image generation through the connected assistant's available tools, and maintains local brand resources and project revision history.
 
-> **Status:** Starter implementation / integration scaffold. Current version: **1.0.0**. The skills, brand registry, onboarding and validation scripts are included. Canva access still requires a user-authorized Canva MCP connection in each agent environment. Image generation is provider-adaptive: the skill uses image-generation tools available in the active host; it does not ship API keys or a private image-generation service.
+> **Status:** Starter implementation / integration scaffold. Current version: **1.1.0**. The skills, brand registry, onboarding and validation scripts are included. Canva access still requires a user-authorized Canva MCP connection in each agent environment. Image generation is provider-adaptive: the skill uses image-generation tools available in the active host; it does not ship API keys or a private image-generation service.
+
+## Release 1.1.0
+
+This release strengthens the design QA and approval lifecycle across Claude Code and OpenAI Codex. Every first render and material revision receives independent, evidence-based five-pass QA. FAIL or UNKNOWN blocks user approval; after QA PASS, the user must explicitly approve the design, and Canva is opened only after separate consent. It also incorporates reference-image text recovery, physical print-size intake, exact-photo preservation, coordinated front/back card checks and improved print-readiness guidance.
 
 ## Release 1.0.0
 
-Initial public release of iDesigner.ai. This release establishes the plugin identity, Claude Code and Codex manifests, specialist design workflows, brand onboarding, quality-review rules, Canva integration guidance, and product logo assets.
+Initial public release of iDesigner.ai. This release established the plugin identity, Claude Code and Codex manifests, specialist design workflows, brand onboarding, Canva integration guidance, and product logo assets.
 
 ## What is included
 
@@ -179,12 +183,12 @@ Edit `config/studio-config.json` to set the resource directory, default output l
 - [Claude Code plugin structure](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev)
 
 
-## Quality review in release 1.0.0
+## Semantic quality review
 
-Release 1.0.0 includes a mandatory semantic content review before visual QA. It checks communication type, audience, single main message, tone, repeated meaning across headings/ribbons/body/footer, personal-vs-institutional voice, and whether each sentence adds value. Personal messages must speak directly to the recipient and must not repeat context already established by the headline or award ribbon. Redundant or audience-inappropriate copy is a hard FAIL, even when the artwork looks polished.
+The plugin includes a mandatory semantic content review before visual QA. It checks communication type, audience, single main message, tone, repeated meaning across headings/ribbons/body/footer, personal-vs-institutional voice, and whether each sentence adds value. Personal messages must speak directly to the recipient and must not repeat context already established by the headline or award ribbon. Redundant or audience-inappropriate copy is a hard FAIL, even when the artwork looks polished.
 
 
-## Mandatory quality and approval lifecycle
+## Mandatory quality and approval lifecycle (release 1.1.0)
 
 Every new design and every material revision follows the same enforced sequence:
 
