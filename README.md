@@ -1,4 +1,4 @@
-# iDesigner.ai Universal
+# iDesigner.ai
 
 **Version 1.3.0** · One creative studio skill system for Claude Code, Cursor, Gemini CLI, Muse Code and OpenAI Codex.
 
