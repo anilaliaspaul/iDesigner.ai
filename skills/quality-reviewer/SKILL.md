@@ -1,12 +1,21 @@
 ---
 name: quality-reviewer
-description: Use when checking a draft design for message purpose, audience fit, redundancy, brand compliance, factual accuracy, accessibility, print readiness and visual quality.
+description: Use when checking a draft design for message purpose, reference similarity, asset identity, brand compliance, factual accuracy and visual quality.
 ---
 
 # Quality Reviewer
 
-Review the complete communication, not merely its visual appearance. First establish the communication type, audience, intended reader response and single main message. Then read every line in order and check whether it contributes new information. Catch repeated meaning across headlines, subtitles, ribbons, body copy, badges and footers.
+Review the complete communication and actual visual output. Run semantic review first, then visual/reference and technical review. Read `skills/graphic-design-studio/references/quality-review.md` and `skills/graphic-design-studio/references/reference-faithful-production.md`.
 
-For personal messages addressed to an individual (such as “Dear Student”), ensure the wording speaks directly to that person. Do not repeat the exam, award or organization context already established by the heading. A heading such as “NATIONAL SUNDAY SCHOOL GRADE 10 EXAM 2026” together with a “DISTINCTION HOLDERS” ribbon already establishes the achievement; the body should congratulate the student personally, not restate “National Sunday School Grade 10 winner” unless explicitly requested.
+Return PASS / FAIL / UNKNOWN with evidence and corrective actions. UNKNOWN is never PASS.
 
-Run semantic content review before visual QA. Return PASS / FAIL / UNKNOWN with evidence and corrective actions. A visually attractive design must fail if its message is redundant, unclear, misleading or unsuitable for its audience. Never infer that a visual element or factual detail is correct if it cannot be inspected. Read `skills/graphic-design-studio/references/quality-review.md`.
+## Mandatory hard gates
+- Exact official logo source is present and unchanged.
+- Exact supplied church, Saint/person and other brand-kit assets are used.
+- Reference composition and display typography are followed when requested.
+- No crude cut-and-paste, sticker edges, white rectangles/ovals or detached assets unless the reference calls for them.
+- No generated substitutes for exact supplied assets.
+- All copy and facts are exact.
+- Inspect the final preview side-by-side with the reference.
+
+A beautiful design must FAIL if it uses the wrong logo, church, Saint or font treatment, or does not resemble the requested reference. Do not approve merely because the requested words and objects are present.
