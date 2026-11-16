@@ -37,3 +37,13 @@ Provide platform/print dimensions, editable source link where available, export 
 - Final text QA must compare every visible word, punctuation mark, date and signature against the locked copy. Inspect at full resolution and at actual print size; reject any missing, extra, duplicated, distorted or pseudo-text.
 - Do not add unrequested crosses, crests, church emblems, decorative captions or other marks. Use only the exact approved identity assets.
 
+## Mandatory QA and approval gate
+
+- After every complete poster/card render and after every material revision, run the independent Quality Reviewer skill against the actual rendered preview and export where available.
+- QA must inspect the entire design and compare every visible word, punctuation mark, date, number, logo and supplied asset against the approved brief and sources.
+- QA must return PASS / FAIL / UNKNOWN with evidence. Any critical/major defect or critical UNKNOWN blocks approval.
+- Fix all blocking issues and rerun QA. Do not ask the user to approve a failed or unverified design.
+- Only after QA PASS, show the preview and QA summary and ask for explicit user approval.
+- If the user requests changes, revise and rerun QA.
+- After explicit user approval, ask separately whether the user wants the design opened in Canva. Open Canva only after an affirmative response; never assume approval includes permission to launch Canva.
+
