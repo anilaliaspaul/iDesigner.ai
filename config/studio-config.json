@@ -27,26 +27,33 @@
   },
   "design_quality": {
     "default_style": "minimalist-editorial",
-    "visual_density": "low",
-    "whitespace": "generous",
-    "max_font_families": 2,
+    "reference_style_overrides_default": true,
+    "reference_typography_overrides_brand_display_font": true,
+    "visual_density": "adaptive-to-reference",
     "allow_unrequested_text": false,
     "allow_generated_logo": false,
+    "allow_generated_replacement_for_supplied_assets": false,
     "require_official_logo_before_production": true,
+    "require_asset_provenance_map": true,
+    "require_reference_side_by_side_qa": true,
+    "require_composite_integration_qa": true,
     "require_copy_verbatim": true,
     "supported_languages": [
       "en",
       "ml"
     ],
     "require_malayalam_shaping_review": true,
+    "fail_on_sticker_like_composite": true,
     "avoid": [
       "random-floating-text",
       "fake-labels",
       "decorative-microcopy",
       "generic-ai-flourishes",
       "unrequested-icons",
-      "cluttered-collages",
-      "gratuitous-effects"
+      "crude-cutout-paste",
+      "invented-logo-or-emblem",
+      "generated-lookalike-for-supplied-asset",
+      "wrong-reference-typography"
     ]
   },
   "design_capabilities": {
