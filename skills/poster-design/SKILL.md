@@ -25,25 +25,23 @@ description: Design professional event, campaign and informational posters for p
 ## Deliverables
 Provide platform/print dimensions, editable source link where available, export file(s), and a concise QA checklist.
 
-## Dense-copy cards and coordinated front/back artwork
 
-- For greeting cards, parish letters, invitations and other text-heavy print pieces, proofread the complete copy before layout when proofreading is requested. Preserve the author's meaning, facts and voice; do not silently rewrite approved wording.
+## Reference-image and print-card learnings
+
 - If the user supplies a reference image containing wording but no separate copy, transcribe the visible text from the reference and flag uncertain portions rather than inventing replacements.
-- Lock approved copy before production. Do not use image generation to render long paragraphs or exact event details. Prepare the background artwork separately and add all text as editable, accurately typeset elements.
-- When a front page is supplied as the style reference for a back page, match its palette, border, winter/seasonal treatment, typography character, ornament style, dimensions and print setup. The back can be quieter to accommodate the message while remaining visually related.
-- When a supplied photo is explicitly requested as the background, use that exact photo. Do not substitute a generated approximation of the church, building, person or other identity-critical subject.
-- For a 10 × 15 cm print, target 1181 × 1772 px at 300 DPI. Calculate other physical sizes from the agreed dimensions; include safe margins and printer-specified bleed.
-- For long messages, prioritize readable type, paragraph spacing, line length and whitespace. If the copy does not fit comfortably, recommend a shorter message or larger card rather than compressing the typography.
-- Final text QA must compare every visible word, punctuation mark, date and signature against the locked copy. Inspect at full resolution and at actual print size; reject any missing, extra, duplicated, distorted or pseudo-text.
-- Do not add unrequested crosses, crests, church emblems, decorative captions or other marks. Use only the exact approved identity assets.
+- If the physical poster/card size is not supplied and print dimensions materially affect layout, ask for the exact size before production.
+- Classify each uploaded image by role: style reference, exact background photograph, logo, subject asset or text source. If the user requests the exact photo as a background, use that photo rather than a generated lookalike.
+- For coordinated front/back cards, match palette, border, typography character, dimensions, orientation, image treatment and print setup.
+- For 10 × 15 cm print at 300 DPI, target approximately 1181 × 1772 px. Check safe margins and printer-specific bleed separately.
+- Keep long copy readable through layout, spacing and line length. If it does not fit, recommend shorter copy or a larger format rather than silently dropping text or shrinking it excessively.
+- Use image generation for visual artwork/backgrounds, not long exact paragraphs or event details. Add final copy as editable, accurately typeset text.
 
 ## Mandatory QA and approval gate
 
-- After every complete poster/card render and after every material revision, run the independent Quality Reviewer skill against the actual rendered preview and export where available.
-- QA must inspect the entire design and compare every visible word, punctuation mark, date, number, logo and supplied asset against the approved brief and sources.
+- After every complete poster/card render and every material revision, run the independent Quality Reviewer against the actual rendered preview and export where available.
+- QA must compare every visible word, punctuation mark, date, number, logo and supplied asset against the approved brief and sources.
 - QA must return PASS / FAIL / UNKNOWN with evidence. Any critical/major defect or critical UNKNOWN blocks approval.
-- Fix all blocking issues and rerun QA. Do not ask the user to approve a failed or unverified design.
+- Fix blocking issues and rerun QA. Do not ask the user to approve a failed or unverified design.
 - Only after QA PASS, show the preview and QA summary and ask for explicit user approval.
 - If the user requests changes, revise and rerun QA.
-- After explicit user approval, ask separately whether the user wants the design opened in Canva. Open Canva only after an affirmative response; never assume approval includes permission to launch Canva.
-
+- After explicit user approval, ask separately whether the user wants the design opened in Canva. Open Canva only after an affirmative response.

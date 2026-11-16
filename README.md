@@ -12,7 +12,7 @@ This release strengthens the design QA and approval lifecycle across Claude Code
 
 ## Release 1.0.0
 
-Initial public release of iDesigner.ai. This release established the plugin identity, Claude Code and Codex manifests, specialist design workflows, brand onboarding, Canva integration guidance, and product logo assets.
+Initial public release of iDesigner.ai. This release establishes the plugin identity, Claude Code and Codex manifests, specialist design workflows, brand onboarding, quality-review rules, Canva integration guidance, and product logo assets.
 
 ## What is included
 
@@ -188,17 +188,13 @@ Edit `config/studio-config.json` to set the resource directory, default output l
 The plugin includes a mandatory semantic content review before visual QA. It checks communication type, audience, single main message, tone, repeated meaning across headings/ribbons/body/footer, personal-vs-institutional voice, and whether each sentence adds value. Personal messages must speak directly to the recipient and must not repeat context already established by the headline or award ribbon. Redundant or audience-inappropriate copy is a hard FAIL, even when the artwork looks polished.
 
 
-## Mandatory quality and approval lifecycle (release 1.1.0)
+## Version 1.1.0
 
-Every new design and every material revision follows the same enforced sequence:
+This release strengthens design quality control and handoff:
 
-1. Create the complete render and inspect the actual artifact.
-2. Run the independent Quality Reviewer skill. It must return PASS / FAIL / UNKNOWN with evidence.
-3. If QA is FAIL or UNKNOWN, fix the defects and rerun the full QA. The user is not asked to approve an unverified design.
-4. After QA PASS, show the preview and QA summary and request explicit user approval.
-5. If the user requests changes, revise and repeat QA.
-6. After the user explicitly approves the design, ask separately whether they want it opened in Canva.
-7. Open the verified Canva design only after the user agrees. Design approval alone is not permission to launch Canva.
-8. Export and record the approved deliverables and QA/approval history.
-
-QA PASS, user approval, and permission to open Canva are three separate states. The plugin must never infer one from another.
+- Independent five-pass QA on the actual rendered design after first render and every material revision.
+- Evidence-based PASS / FAIL / UNKNOWN decisions; critical UNKNOWN and critical/major defects block approval.
+- Explicit user approval only after QA PASS.
+- Separate Canva-opening consent after user approval; Canva is never opened automatically.
+- Reference-image text transcription when no separate copy is supplied, with uncertain transcription flagged.
+- Mandatory physical-size intake when print dimensions are missing, plus coordinated front/back card and print-readiness checks.

@@ -1,6 +1,6 @@
 # Export and Canva handoff
 
-This workflow is orchestrated by `skills/graphic-design-studio/SKILL.md`. Preserve the selected brand rules, approved copy, QA evidence and version history.
+This workflow is orchestrated by `skills/graphic-design-studio/SKILL.md`. Preserve selected brand rules, approved copy, QA evidence and version history.
 
 ## Mandatory sequence
 
