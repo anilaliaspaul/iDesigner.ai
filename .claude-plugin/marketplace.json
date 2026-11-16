@@ -5,7 +5,8 @@
   "plugins": [
     {
       "name": "idesigner-ai",
-      "description": "Brand-aware creative design studio for Claude Code and Codex.",
+      "version": "1.1.0",
+      "description": "Brand-aware creative design studio with mandatory independent QA, explicit user approval and consent-based Canva handoff.",
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/anilaliaspaul/iDesigner.ai"
