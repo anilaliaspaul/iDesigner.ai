@@ -1,24 +1,29 @@
 # Image generation
 
 ## Provider selection
+Use whichever image-generation capability is available and authorized in the current host. Do not assume credentials or availability. If no generator is available, use supplied assets or ask the user to connect one.
 
-Use whichever image-generation capability is available and authorized in the current host: connected provider tools, Canva image generation, or another explicitly configured provider. The provider is selected at runtime; do not assume credentials or availability. If no generator is available, use supplied assets or ask the user to connect one.
-
-## Minimalist asset direction
-
+## Asset-generation boundaries
 - Generate supporting imagery only, never a complete poster containing text or branding.
-- Default to a restrained, art-directed visual with a clear subject, simple composition and intentional negative space.
-- Avoid clutter, random decorative elements, pseudo-lettering, fake typography, arbitrary symbols, badges, labels, watermarks, collages and gratuitous effects.
-- Generate one or a small number of purposeful assets, not a pile of unrelated visuals.
-- Prompt explicitly for absolutely no text, letters, numbers, logos, symbols that resemble a logo, watermarks, captions or pseudo-writing.
-- Do not add imagery if typography and whitespace communicate the brief better.
+- When a user supplies a logo, church, Saint, person, product or other exact asset, do not regenerate or approximate it. Use the exact source file.
+- Do not generate a replacement church exterior, Saint image, logo, church name, emblem, lettering, date, badge or other exact brand asset.
+- Never generate a complete poster and then cover incorrect generated assets with pasted originals. Build the scene around the real assets from the beginning.
+- Generated backgrounds may provide atmosphere, sky, foliage or secondary decorative elements, leaving correct compositional space for real assets.
+- Generated imagery must contain no text, letters, numbers, logos, watermarks, captions or pseudo-writing.
+
+## Reference-led styling
+- Inspect the reference before writing an image prompt.
+- Match requested composition, visual density, lighting, palette and depth. Do not impose minimalist styling on an ornate or layered reference.
+- Treat the reference as a design specification when the user requests the same style or a replacement within it.
+- Build reference-derived typography as editable text/vector elements, not image-generation text.
+
+## Integration
+Use a capable design/compositing tool. Match light direction, colour temperature, contrast, scale, perspective, depth, contact shadow, ambient occlusion and foreground/background overlap. Avoid sticker-like placement, crude masks and generic glow outlines.
+
+For background removal, use high-quality segmentation/matting and edge refinement. Preserve white garments, smoke, halo details, hair, chains, foliage and architectural edges. If clean extraction is not possible, retain the full source in a designed photo frame/window or atmospheric fade; do not use a crude polygon or threshold mask.
 
 ## Identity and rights
-
-For real people, use only user-supplied or otherwise authorized references. Preserve face shape, features, age, skin tone, hairstyle and natural texture. Do not change identity or imply endorsement.
-
-For logos, use the exact approved file from the selected brand folder. Never generate, redraw, approximate, trace or edit a logo. If the approved logo is missing, stop and ask the user to provide it.
+For real people, use only user-supplied or authorized references and preserve identity. For logos, use the exact approved file and preserve source proportions, colours and transparency.
 
 ## Asset delivery
-
-Prefer transparent PNG or vector SVG where appropriate. Record provider, prompt, source/reference IDs and any known usage restrictions in the project asset log. Do not claim ownership or licensing terms that are not known.
+Record provider, prompt, source/reference IDs, usage restrictions and exact file paths for supplied assets.
