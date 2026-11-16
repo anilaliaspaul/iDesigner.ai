@@ -1,6 +1,9 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "idesigner-ai",
+  "owner": {
+    "name": "Anil Aias Paul"
+  },
   "description": "iDesigner.ai plugin marketplace for Claude Code.",
   "plugins": [
     {
