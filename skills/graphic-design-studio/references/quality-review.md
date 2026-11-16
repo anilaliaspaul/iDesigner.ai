@@ -61,3 +61,47 @@ Use the explicit decision: fail the design whenever a semantic, audience-fit or 
 - **UNKNOWN** is not PASS. State what could not be inspected and request the needed preview, source or confirmation.
 - Never mark an item PASS solely because the design tool returned success. Inspect the preview or relevant metadata.
 - Do not call a design final or production-ready until both the semantic content review and visual/technical review pass.
+
+## 7. Independent QA execution and evidence
+
+This checklist is not a self-congratulation exercise. The Quality Reviewer must inspect the actual rendered artifact after every first creation and every material revision.
+
+- Review the actual preview/render at full resolution. Inspect the export too when available.
+- Compare every visible word and punctuation mark against the locked copy, not against memory or the prompt.
+- Verify factual details against the approved brief/source. Check names, dates, weekdays, times, locations, prices, URLs, contact information and references.
+- Inspect the whole composition, including small labels, footer, logos, edge details and decorative elements.
+- Verify brand identity and exact logo asset. Verify that supplied photos are the exact photos requested, not lookalikes.
+- For multilingual designs, inspect real rendered glyph shaping and line breaks. A font name or successful export is not proof that glyphs rendered correctly.
+- For print, verify physical dimensions, pixel dimensions, resolution, safe margins and bleed where the printer's requirements are known.
+- For a front/back set, inspect the two sides together for consistent size, orientation, visual family and readability.
+- Record evidence for every FAIL or UNKNOWN. Never mark an item PASS because it was not checked.
+- Critical UNKNOWN blocks PASS. Any critical or major defect blocks approval until fixed.
+- Re-run the entire applicable QA after correction. A previous version's PASS does not transfer to a revised version.
+
+## 8. Required QA report and status
+
+The reviewer must report:
+- Overall PASS / FAIL / UNKNOWN.
+- Exact version and render/export inspected.
+- Semantic purpose, audience and main-message result.
+- Exact-copy and factual verification result.
+- Brand/logo/photo/asset integrity result.
+- Visual hierarchy, readability, contrast, spacing and clutter result.
+- Language and glyph-rendering result.
+- Dimensions, resolution, safe-margin/bleed and export result.
+- Defects by severity, with location, evidence and correction.
+- Unverified items and why they could not be inspected.
+- Whether the design is cleared to be shown to the user for approval.
+
+A QA PASS is internal quality clearance only. It is not the user's approval and does not authorize opening Canva.
+
+## 9. User approval and Canva handoff sequence
+
+1. After QA PASS, show the actual preview and a concise QA summary to the user.
+2. Ask the user explicitly: "Do you approve this design?"
+3. If the user requests a change or does not approve, revise and rerun QA before asking again.
+4. Only after explicit user approval, ask separately: "Would you like me to open this design in Canva?"
+5. Open Canva only after an affirmative answer, using the exact verified design URL and connected capability.
+6. If the user declines, do not open Canva. Continue only with deliverables the user requested.
+7. Never fabricate a Canva URL or claim that Canva has been opened unless the connected action confirms it.
+

@@ -1,10 +1,11 @@
 {
   "$schema": "https://developers.openai.com/plugins/plugin.schema.json",
   "name": "idesigner-ai",
-  "version": "1.0.0",
-  "description": "iDesigner.ai is a brand-aware creative design plugin for Claude Code and OpenAI Codex, with Canva workflows, poster design, canvas design, algorithmic art, Adobe Express template workflows and brand systems.",
+  "version": "1.1.0",
+  "description": "iDesigner.ai is a brand-aware creative design plugin for Claude Code and OpenAI Codex, with independent evidence-based QA, explicit user approval gates, consent-based Canva handoff, Canva workflows, poster design, canvas design, algorithmic art, Adobe Express template workflows and brand systems.",
   "author": {
-    "name": "Local workspace"
+    "name": "Anil Alias Paul",
+    "url": "https://github.com/anilaliaspaul"
   },
   "skills": "./skills/",
   "mcpServers": "./mcp.json",
