@@ -160,3 +160,43 @@ Read the relevant references before executing that part of the workflow:
 - `references/quality-review.md`
 - `references/iteration-and-versioning.md`
 - `references/canva-workflow.md`
+
+## Lessons learned: reference-led greeting cards and print artwork
+
+Apply these rules whenever a design includes a supplied photograph, a matching front/back set, dense copy, or a fixed physical print size.
+
+### Exact text and proofreading gate
+- If the user supplies copy, treat it as the source of truth. Do not omit, paraphrase, shorten, expand, or add wording unless the user explicitly requests editing.
+- If the user asks for proofreading, correct grammar, punctuation, spelling and awkward sentence flow while preserving meaning, facts, tone and the author's voice. Show the complete corrected copy before production when the corrections alter wording; wait for approval if the user has asked to approve copy or if a factual meaning could change.
+- If the user provides a reference image but no separate text, inspect and transcribe the visible wording from that reference as the default copy source. Mark uncertain or unreadable words and ask only about those; never invent missing text.
+- Lock the approved copy as a content block. Use that same block for every design iteration and compare the final rendered text against it line by line.
+- Never let an image model invent or render dense final copy. Generate or prepare the artwork/background without text, then place exact wording as editable Canva text or through a precise typesetting/compositing step. This avoids misspellings, missing sentences and hallucinated punctuation.
+- Decorative words, dates, captions, fake emblems and pseudo-writing are prohibited unless explicitly included in the approved copy.
+
+### Supplied photographs and identity-critical backgrounds
+- Classify each uploaded image explicitly: style reference, layout reference, exact photo/background, logo, subject asset, or text source. One image may have more than one role.
+- When the user says to use a supplied photograph as the background, use that actual image as the background layer. Do not replace it with a generated approximation, a different building, or a generic lookalike.
+- Preserve identity-critical architectural features, iconography, stained glass, altar, signage and other defining details. Crop only as needed for the agreed aspect ratio; disclose material crops.
+- Lighten, fade, blur or tint the supplied photo only to the extent requested or needed for legibility. Prefer a controlled translucent panel or gradient over washing out the entire image.
+- Keep the photo visible enough to be recognizable while ensuring body copy has strong contrast. Inspect the final at actual print size, not only as a zoomed preview.
+
+### Matching front and back of a card
+- When the user supplies the front and requests the back, treat the front as the controlling style reference, not merely loose inspiration.
+- Match the established palette, seasonal mood, border treatment, illustration/photo treatment, ornament style, typography character and overall visual density. The back may use a calmer composition to support longer copy, but it must clearly belong to the same set.
+- Use the exact supplied church/building photograph for the back when requested. Do not generate a substitute building.
+- Keep shared details consistent: physical dimensions, orientation, safe margins, border language, key colours and print resolution. Do not reuse a previous project's dimensions unless the current card brief or the user explicitly says it is the same set.
+- Avoid adding a new logo, crest, cross, seal or church emblem unless the exact approved asset is supplied or the user explicitly authorizes it.
+
+### Fixed-size print and long-copy layout
+- If width and height are supplied, lock them and do not ask again. If missing, ask one concise question for the physical dimensions and unit before production.
+- For small-format print, target 300 DPI and calculate pixels as inches × 300 (or centimetres ÷ 2.54 × 300). For example, 10 × 15 cm is approximately 1181 × 1772 pixels at 300 DPI.
+- Record bleed and safe margins separately. Do not claim that pixel dimensions alone guarantee print readiness; check the printer's bleed and colour requirements when known.
+- Fit long copy by improving hierarchy, line length, leading, paragraph spacing and text-panel design before reducing type size. Do not squeeze paragraphs into a crowded card.
+- If the copy cannot be comfortably read at the agreed size, explain the trade-off and recommend shortening the copy or increasing the card size. Do not silently shrink the font or remove content.
+- Keep headings and invitation details visually distinct, but do not let decorative banners, ornaments or borders consume the space needed by the message.
+
+### Fast path for a clear brief
+- If the user has already supplied the purpose, exact copy, dimensions and visual references and says to create, do not restart intake, ask for information already present, or force 2–3 concept selection. Derive one coherent direction and proceed.
+- Ask only for missing information that materially affects correctness or production. Make creative decisions for nonessential styling details.
+- For a requested revision, preserve all previously approved elements and change only the named items.
+
