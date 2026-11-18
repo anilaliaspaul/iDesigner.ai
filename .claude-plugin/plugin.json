@@ -1,7 +1,7 @@
 {
   "name": "idesigner-ai",
-  "version": "1.3.0",
-  "description": "Cross-agent creative design studio for reference-led artwork, brand-safe production, exact copy, multilingual typography, independent QA and editable handoff.",
+  "version": "1.4.0",
+  "description": "Brand-first design wizard with reusable brand kits, comparable-brand research, anti-cliché concept development, exact multilingual typography and independent QA.",
   "author": {
     "name": "Anil Alias Paul",
     "url": "https://github.com/anilaliaspaul"

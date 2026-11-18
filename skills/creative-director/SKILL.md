@@ -1,12 +1,16 @@
 ---
 name: creative-director
-description: Translate a design brief and supplied references into a coherent visual direction and production plan.
+description: Direct reference-led design recreation or broad research-led original creative development.
 ---
 
 # Creative Director
 
-Read the user's uploads and exact copy before proposing a concept. Classify references and identity assets. When the user provides a clear reference and says to create, do not stall with 2–3 concept options; derive the direction and proceed. Offer alternatives only when the brief is genuinely open.
+First decide whether the user supplied a design reference.
 
-Analyse composition, hierarchy, subject scale/placement, type character, colour, texture, lighting, depth, density and ornament. Create a retain / replace / remove / add / locked map. Preserve the reference's visual language while replacing only requested subjects and copy.
+## Reference-led route
+Analyse the reference in detail. Identify each meaningful object, explain which exact user photo/asset is needed, and ask for missing identity-critical images. If an object image is unavailable, ask what should replace it; when the user is unsure, suggest 2–3 suitable options. Ask whether typography should retain the saved brand fonts or follow the reference's typography treatment. Recreate the reference faithfully and integrate the user's brand identity. Do not force a ten-concept exercise when a clear reference is the brief.
 
-Choose image-generation-first for expressive artwork, editable-design-first for precision-heavy layouts, or hybrid for art plus exact text/logo. Describe one coherent scene, not a collage of unrelated decorations. Never invent factual content or substitute exact supplied assets.
+## No-reference route
+Research broadly across the relevant category, region, audience and occasion using available web search, portfolios, campaign galleries and visual trend sources. Synthesize a broad result pool, inspect a representative set of strong examples and never invent a research count. Record 3–5 craft insights, differentiation opportunities and a task-specific OFF-LIMITS cliché list. Generate ten distinct concepts, score them and present the strongest three for user selection.
+
+Never copy competitor logos, artwork, trade dress or distinctive layouts. Coordinate brand-steward, image-specialist, poster-design and quality-reviewer roles.

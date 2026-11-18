@@ -1,14 +1,14 @@
 # Poster Design Workflow
 
-1. Inspect all user uploads and exact copy.
-2. Classify style reference, composition reference, exact logo, exact subjects and supporting assets.
-3. Record output dimensions and locked text.
-4. Use creative-director and brand-steward roles to analyse visual direction and audit assets.
-5. Route through image-specialist and poster-design skills; consult layout-typography, canvas-design, algorithmic-art and the skills collection as relevant.
-6. Generate a coherent artistic composition using actual references when supported.
-7. Finish exact logos, typography and factual copy using precise design tools.
-8. Run independent QA for spelling, grammar, sentence structure, exact facts, random AI text, visual artifacts, reference fidelity, image quality, brand and technical output.
-9. Fix all failures and repeat QA. Present only a QA PASS for user approval.
-10. After explicit user approval, create a new editable Canva design. Use separate editable text, logo, image and vector layers wherever practical.
-11. Inspect Canva preview against approved artwork and run post-Canva QA.
-12. Deliver the Canva edit URL, preview, approved export and honest editability breakdown.
+1. Identify the brand and load/create its reusable brand kit.
+2. Use existing kit → website → recent posters/logo → interview as the brand-discovery fallback.
+3. Treat logo, website, tagline and address as optional; never invent a logo.
+4. After kit review, collect poster purpose, audience, exact copy, language, verified facts, CTA, assets and constraints.
+5. Confirm platform and dimensions; recommend a standard when needed.
+6. Research comparable brands and audience/occasion needs. Record craft insights and an OFF-LIMITS cliché list.
+7. Generate ten distinct concept routes, shortlist three and ask the user to choose.
+8. Produce a cohesive composition using the best available image-generation/editable/hybrid route.
+9. Finish exact logos and text as separate assets/layers when fidelity requires it.
+10. Run independent QA for copy, language shaping, image integrity, brand consistency, reference fidelity, cliché avoidance, dimensions and export.
+11. Fix failures, obtain user approval and deliver the artwork plus editability/QA notes.
+12. Retain the brand kit, research, selected concept, master assets and revision history for repeat posters.

@@ -43,11 +43,19 @@ class UniversalPackageTests(unittest.TestCase):
         ]
         self.assertEqual(len(set(versions)), 1)
 
-    def test_brand_kit_is_retained(self):
-        brand = ROOT / "resources/brands/ststephen"
-        self.assertTrue((brand/"brand-kit.json").exists())
-        self.assertTrue((brand/"St-Stephen-Brand-Guide.pdf").exists())
-        self.assertTrue((brand/"01-Logos/st-stephen-logo.png").exists())
+    def test_brand_template_allows_optional_logo(self):
+        brand = json.loads((ROOT / "resources/brands/_template/brand.json").read_text(encoding="utf-8"))
+        self.assertIsNone(brand["logo_assets"]["primary"])
+        self.assertTrue(brand["logo_rules"]["logo_optional"])
+        self.assertEqual(brand["status"], "proposed")
+
+    def test_design_wizard_and_research_guides_exist(self):
+        refs = ROOT / "skills/graphic-design-studio/references"
+        for name in ["design-wizard.md", "brand-research.md", "brand-onboarding.md"]:
+            self.assertTrue((refs / name).is_file(), name)
+        wizard = (refs / "design-wizard.md").read_text(encoding="utf-8")
+        self.assertIn("Ten ideas, three finalists", wizard)
+        self.assertIn("recent poster", wizard)
 
     def test_all_skills_have_valid_frontmatter(self):
         for skill in (ROOT/"skills").glob("*/SKILL.md"):
