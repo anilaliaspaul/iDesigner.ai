@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.2 — Context-aware brand asset selection
+
+- Added explicit rules that brand photography is optional, not mandatory decoration.
+- Use church/building interiors and exteriors only when the event, message or composition benefits from them.
+- Choose event-relevant imagery for seasonal, youth, education and campaign designs instead of repeatedly inserting the same organization photos.
+- Preserve exact uploaded logos and identity-critical photographs; never replace them with generated approximations.
+- Updated all platform manifests and installation documentation to version 1.4.2.
+
 ## 1.4.0 — Brand-first design wizard
 
 - Added staged brand selection and kit discovery before poster brief and output sizing.
