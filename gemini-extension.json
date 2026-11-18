@@ -1,6 +1,6 @@
 {
   "name": "idesigner-ai",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "Brand-first design wizard with reusable brand kits, comparable-brand research, anti-cliché concept development, exact multilingual typography and independent QA.",
   "contextFileName": "GEMINI.md"
 }
