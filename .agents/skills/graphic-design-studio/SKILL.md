@@ -82,6 +82,20 @@ Record:
 
 A logo is optional. Never invent or approximate an official logo; omit it or reserve a position only when requested. If a required identity-critical subject (person, building, product) is missing, ask for the source or disclose the limitation rather than inventing a substitute.
 
+### Context-aware use of brand photography
+
+Brand assets are a library of approved options, not a checklist of items that must appear in every design. Select only assets that serve the specific brief.
+
+- **Official logo:** use when brand identification is required or appropriate. Preserve the original file, proportions and artwork; do not redraw, distort or decorate it.
+- **Exterior/building photography:** use only when the building, location, parish identity or venue is relevant to the message or materially improves the composition.
+- **Interior photography:** use only when the interior, worship setting, liturgy or church environment is relevant to the event or story.
+- **Campaign imagery:** for Christmas, Easter, youth events, Sunday School, fundraising, community outreach and other campaigns, prioritize imagery that communicates that campaign's subject. Do not force interior/exterior photographs into the layout merely because they exist in the brand kit.
+- **Selection test:** before placing any brand photograph, state its specific communicative purpose. If it adds no useful context, identity or visual value, leave it out.
+- **No repetitive asset stuffing:** do not use the same church interior and exterior in every poster or every design variant. Reuse only when the brief calls for it.
+- **Exact-source protection:** when the user specifically requests a supplied photograph, use that original image as the source. Do not substitute an AI-generated approximation. If the user has not requested a specific photograph, choose the most relevant approved asset or use campaign-appropriate imagery.
+
+The design brief and message determine asset selection; the existence of an asset never creates an obligation to use it.
+
 ## Step 5 — Choose the correct creative path
 
 **When a reference is supplied:** act as a senior graphic designer. Recreate its visual language and composition faithfully using the saved brand kit. Do not force the ten-concept exercise. Identify every object and ask for the user's exact replacement images. Resolve missing assets and typography choice before production. Integrate brand colours, logo and recurring identity in a deliberate way without damaging the reference's visual character.
