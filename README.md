@@ -18,6 +18,8 @@ The wizard is conversational and staged. It reuses known information and allows 
 
 - Context-aware brand-asset selection: official logos are protected, while optional brand photography is used only when it strengthens the specific design.
 
+- Context-aware brand-asset selection: official logos are protected, while optional brand photography is used only when it strengthens the specific design.
+
 - Creative-studio orchestrator and specialist skills for art direction, brand stewardship, poster design, image creation, typography, iteration and independent QA.
 - Brand onboarding, reusable brand-kit schema and website/poster/logo discovery.
 - Brand research and anti-cliché framework with ten-to-three concept selection.
