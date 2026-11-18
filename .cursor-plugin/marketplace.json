@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "iDesigner.ai brand-first design studio for Cursor",
-    "version": "1.4.0"
+    "version": "1.4.2"
   },
   "plugins": [
     {
       "name": "idesigner-ai",
       "source": ".",
       "description": "Brand-first design wizard with reusable brand kits, comparable-brand research, anti-cliché concept development, exact multilingual typography and independent QA.",
-      "version": "1.4.0"
+      "version": "1.4.2"
     }
   ]
 }
