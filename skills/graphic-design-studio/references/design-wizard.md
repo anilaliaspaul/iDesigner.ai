@@ -85,3 +85,8 @@ Return PASS / FAIL / UNKNOWN with evidence and precise fixes. UNKNOWN is not PAS
 - Repeat until QA returns PASS, or explain a blocker that cannot be fixed with available tools/assets. Never relabel a failure as a pass.
 - Only after QA PASS, present the output to the user for approval. Do not claim user approval automatically.
 - After approval, export the requested formats, preserve the approved version and update reusable brand/campaign assets only with user permission.
+
+
+## Brand photography selection rule
+
+Treat approved brand photographs as optional assets, not mandatory components. Use the official logo when brand identification is appropriate. Use an exterior only when the building/location/parish identity is relevant; use an interior only when the worship or church setting is relevant. For seasonal, youth, Sunday School, fundraising and community campaigns, choose imagery that communicates the campaign rather than automatically inserting church interior/exterior photos. Before using a brand photograph, identify its purpose. If it adds no meaningful identity, context or visual value, omit it. Never repeat the same photos across every design by default. When the user specifically requests a supplied photograph, use that exact source rather than an AI-generated approximation.
