@@ -1,6 +1,6 @@
 # iDesigner.ai
 
-**Version 1.4.0** · A brand-first, research-led creative studio for Claude Code, Cursor, Gemini CLI, Muse Code and OpenAI Codex.
+**Version 1.4.2** · A brand-first, research-led creative studio for Claude Code, Cursor, Gemini CLI, Muse Code and OpenAI Codex.
 
 iDesigner.ai helps an AI agent work like a modern graphic-design studio: discover the brand, build a reusable brand kit, understand the poster brief, research the visual category, develop concepts, produce artwork and independently validate the final export.
 
@@ -15,6 +15,8 @@ iDesigner.ai helps an AI agent work like a modern graphic-design studio: discove
 The wizard is conversational and staged. It reuses known information and allows optional brand fields to be skipped.
 
 ## What's included
+
+- Context-aware brand-asset selection: official logos are protected, while optional brand photography is used only when it strengthens the specific design.
 
 - Creative-studio orchestrator and specialist skills for art direction, brand stewardship, poster design, image creation, typography, iteration and independent QA.
 - Brand onboarding, reusable brand-kit schema and website/poster/logo discovery.
