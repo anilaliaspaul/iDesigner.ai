@@ -36,7 +36,7 @@ The plugin discovers tools at runtime and must state limitations honestly. It do
 
 ## Versioning
 
-- Plugin package version: `1.4.0`
+- Plugin package version: `1.4.2`
 - Canonical skills: `skills/`
 - Compatibility mirror: `.agents/skills/`
 - Do not hand-edit the generated mirror; regenerate it from the canonical source.
