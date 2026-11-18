@@ -1,43 +1,42 @@
 # Cross-platform installation
 
-iDesigner.ai 1.3.0 uses one canonical skill library. Platform files are thin adapters around it. The shared creative workflow is in `skills/graphic-design-studio/SKILL.md`; specialist skills and St. Stephen brand assets remain in the same repository.
+iDesigner.ai uses one canonical, brand-neutral skill library. It contains no preconfigured client identity, sample organization, church, company, logo or brand assets. Each user creates or selects their own brand kit in the active project workspace.
 
 ## Compatibility and what each adapter does
 
 | Host | Native entry point | Install / enable path | Notes |
 |---|---|---|---|
 | Claude Code | `.claude-plugin/` + `skills/` | `claude plugin marketplace add anilaliaspaul/iDesigner.ai` then `claude plugin install idesigner-ai@idesigner-ai-marketplace` | Uses the same skills and bundled agent role prompts. |
-| Cursor | `.cursor-plugin/`, `.cursor/rules/`, `.agents/skills/` | Add `https://github.com/anilaliaspaul/iDesigner.ai` from Cursor Settings → Plugins/Marketplaces, or use the repo as a project with `.cursor/rules/` and `.agents/skills/`. | Cursor-specific marketplace UI/format may vary by release. Shared AGENTS.md is also present. |
-| Gemini CLI | `gemini-extension.json` + `GEMINI.md` | `gemini extensions install https://github.com/anilaliaspaul/iDesigner.ai` | The extension supplies persistent context; skills are available in the repository's `skills/` folder. |
-| Muse Code | `.agents/skills/` | `muse skills validate ./.agents/skills/graphic-design-studio` then `muse skills install ./.agents/skills/graphic-design-studio --scope user` | Muse's documented project-skill location is `.agents/skills/<id>/SKILL.md`. Run `muse skills list` to verify. |
-| Codex | `plugin.json`, `.codex-plugin/plugin.json`, `.agents/plugins/marketplace.json` | Add the repo marketplace in Codex Plugins, or use the local plugin folder for testing. | Root `plugin.json` is the portable Agent Plugins manifest; `.codex-plugin/plugin.json` is retained for compatibility. |
+| Cursor | `.cursor-plugin/`, `.cursor/rules/`, `.agents/skills/` | Add the repository from Cursor Settings → Plugins/Marketplaces, or use it as a project. | Marketplace UI/format may vary by release. |
+| Gemini CLI | `gemini-extension.json` + `GEMINI.md` | `gemini extensions install https://github.com/anilaliaspaul/iDesigner.ai` | Extension supplies persistent context. |
+| Muse Code | `.agents/skills/` | `muse skills validate ./.agents/skills/graphic-design-studio` then install using Muse's documented skills workflow. | Verify with `muse skills list`. |
+| Codex | `plugin.json`, `.codex-plugin/plugin.json`, `.agents/plugins/` | Add the repository marketplace in Codex Plugins, or use the local plugin folder for testing. | Root manifest is portable; Codex compatibility manifest is retained. |
 
-## Recommended setup
+## Brand-independent onboarding
 
-1. Clone the repository.
-2. Install the native adapter for your preferred host.
-3. Confirm the `graphic-design-studio` skill is visible.
-4. Keep brand assets under `resources/brands/<brand-slug>/`.
-5. When editing canonical skills, edit `skills/` then run `python scripts/sync_portable_skills.py`.
-6. Run `python scripts/validate_universal.py` before committing or releasing.
+1. Ask the user which brand the design is for.
+2. Search the active workspace brand registry for a matching saved `brand.json`.
+3. If found, load the saved brand kit and ask whether to use or update it.
+4. If not found, tell the user and ask permission before creating a new kit.
+5. After consent, collect official name, address, recurring branding text, tagline, logo and website. If there is no website, request recent posters/designs as visual evidence. Optional fields may be skipped.
+6. Save and validate the kit in the user's active workspace, re-read it, and use it as the source of truth for the design.
+
+The plugin repository contains only the generic template at `resources/brands/_template/`. It does not contain a default client brand. Client logos, posters, photos, fonts and private identity assets belong in the user's workspace and must not be committed to this public repository without explicit permission.
 
 ## Tool parity is not automatic
 
 A shared skill can travel between agents; tool access cannot. Each host must separately provide or connect:
-- an image-generation/image-editing capability;
+- image-generation/image-editing capability;
 - file read/write and image preview capability;
-- optional Canva MCP for the editable handoff;
-- optional Adobe Express integration if that workflow is requested.
+- optional Canva integration for editable handoff;
+- optional Adobe Express integration;
+- live web search for comparable-brand research.
 
-The plugin discovers tools at runtime. It must use the best available route and state limitations honestly. It does not install API credentials, bypass platform permissions, or guarantee that one image model produces identical results across hosts.
-
-## Brand assets
-
-The included `resources/brands/ststephen/` kit is retained as a sample brand profile. Treat its logos, fonts, photos, reference designs and palette as user-owned assets. Do not assume other brands use St. Stephen's identity. Add new brands using `scripts/create_brand.py` and validate with `scripts/validate_brands.py`.
+The plugin discovers tools at runtime and must state limitations honestly. It does not install credentials, bypass permissions or guarantee identical model results across hosts. If persistent file storage is unavailable, disclose that the brand kit cannot be retained beyond the available session/workspace.
 
 ## Versioning
 
-- Plugin package version: `1.3.0`
+- Plugin package version: `1.4.0`
 - Canonical skills: `skills/`
 - Compatibility mirror: `.agents/skills/`
 - Do not hand-edit the generated mirror; regenerate it from the canonical source.

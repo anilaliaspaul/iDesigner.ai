@@ -1,28 +1,18 @@
 ---
 name: brand-guidelines
-description: Capture, validate and apply a brand system including approved logos, palette, typography, voice, imagery and usage rules.
+description: Build, document, search and apply independent reusable brand kits in the active workspace.
 ---
 
-# Brand Guidelines Skill
+# Brand Guidelines
 
-## Purpose
-Create and enforce a brand source of truth for all design outputs. This skill applies the selected organisation's own guidelines; it does not impose another company's identity.
+iDesigner.ai is brand-independent. It must ship with a generic empty brand template, not a real client, church, company or organization. Never include example client identity assets as defaults.
 
-## Brand onboarding
-Collect and verify: official brand name, purpose/audience, approved logo files and variants, colour values, typography and font licences, language/script support, imagery style, layout preferences, prohibited treatments, approved reference designs, and brand voice/copy rules.
+## Find before creating
+Ask for the brand name, then search the active workspace brand registry by normalized slug and exact/case-insensitive `brand.json` name. Read the matching kit. If none exists, say so and ask permission before creating a kit.
 
-## Asset integrity
-- Official logo files must be supplied by the brand owner or an authorized source. Never generate, redraw, trace, approximate or typeset a logo.
-- Preserve original logo proportions, colours, clear space and variant rules.
-- If logo assets are missing or ambiguous, block production and request clarification.
-- Record font file names, weights, licences and language coverage. Never claim a font is present unless its file is in the brand folder.
+## Create after consent
+Collect official name, address, recurring branding text, tagline/motto, logo files and website. If no website exists, ask for recent poster(s) or reference designs. Allow missing optional details; never fabricate them. Save canonical data to `brand.json`, `design-readme.md`, `palette/palette.json`, `typography/font-inventory.json`, plus exact logo/reference/photography assets in the active workspace. Mark values confirmed/inferred/unknown and status proposed/approved.
 
-## Application
-1. Read `brand.json`, `design-readme.md`, palette, typography inventory and approved references.
-2. Resolve conflicts by asking the user; do not silently invent brand rules.
-3. Apply approved colour, typography, spacing, imagery and tone consistently.
-4. Check accessibility contrast and legibility.
-5. Record any approved exception in the project decision log.
+Website evidence is not user confirmation. Poster analysis must separate permanent identity from one-off campaign text. Never invent or approximate a logo. Do not commit private client assets to a public plugin repository.
 
-## Important distinction
-The Anthropic `brand-guidelines` reference skill is specific to Anthropic's own colours and typography. This studio's skill is a neutral brand-system workflow and must never apply Anthropic branding to unrelated organisations.
+After saving, re-read the files and use them as the source of truth. Validate and present a concise brand-kit summary for approval. If persistent storage is unavailable, disclose that and provide exportable files.

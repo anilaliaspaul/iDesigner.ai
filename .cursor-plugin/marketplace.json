@@ -5,15 +5,15 @@
     "url": "https://github.com/anilaliaspaul"
   },
   "metadata": {
-    "description": "iDesigner.ai for Cursor",
-    "version": "1.3.0"
+    "description": "iDesigner.ai brand-first design studio for Cursor",
+    "version": "1.4.0"
   },
   "plugins": [
     {
       "name": "idesigner-ai",
       "source": ".",
-      "description": "Cross-agent creative design studio for reference-led artwork, brand-safe production, exact copy, multilingual typography, independent QA and editable handoff.",
-      "version": "1.3.0"
+      "description": "Brand-first design wizard with reusable brand kits, comparable-brand research, anti-cliché concept development, exact multilingual typography and independent QA.",
+      "version": "1.4.0"
     }
   ]
 }

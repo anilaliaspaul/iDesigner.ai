@@ -1,38 +1,60 @@
 # Brand design guide
 
-> Status: DRAFT. Replace this template with approved brand guidance.
+> Status: PROPOSED. Confirm inferred rules with the brand owner before treating them as official.
 
 ## Brand essence
-- Mission / audience:
+- Official name:
+- Industry:
+- Audience:
+- Positioning / promise:
+- Mission:
 - Personality:
 - Tone of voice:
 
-## Logo usage
-- Primary logo:
+## Source and confidence
+- Source type: existing kit / website / recent posters and logo / interview
+- Source pages or files:
+- Confirmed:
+- Inferred:
+- Unknown:
+- User approval status:
+
+## Logo
+- Primary logo file (optional):
+- Variants:
 - Clear space:
 - Minimum size:
 - Approved backgrounds:
-- Never:
+- Restrictions:
+- If no logo is supplied: omit or reserve a position; never invent one.
+
+## Colour
+See `palette/palette.json`. Mark each token confirmed or proposed, with source and intended use.
 
 ## Typography
 - Display:
-- Headings:
+- Heading:
 - Body:
-- Fallbacks and language support:
+- English font and shaping status:
+- Malayalam font and shaping status:
+- Licensed font files / fallbacks:
 
-## Colour
-See `palette/palette.json`. Mark each token as confirmed or proposed.
+## Recurring brand copy
+- Tagline:
+- Address:
+- Phone/email/URL/social:
+- Mandatory wording:
+- Legal / organizational notes:
 
 ## Visual language
 - Photography:
 - Illustration:
-- Shapes / patterns:
+- Recurring motifs:
 - Layout preferences:
-- Avoid:
-
-## Required content
-- Mandatory wording:
-- Legal / organizational notes:
+- Avoid / cliché blacklist:
 
 ## Reference designs
-List each file and mark it as approved, inspiration-only or deprecated.
+For each poster/logo/photo, record filename, date if known, role, source and status: approved-example, inspiration-only or deprecated. Separate brand identity from one-off campaign treatment.
+
+## Change log
+Record user-approved changes to palette, logo usage, typography, tone and recurring copy.

@@ -1,30 +1,17 @@
-# Creative direction — reference-led, outcome-first
+# Creative direction — two distinct production paths
 
-## Read the user's brief before proposing concepts
+## Start with the user's intent
+Read the brand kit, brief, exact copy and every uploaded reference. Do not force concept selection when the user has supplied a clear design reference and asked for recreation.
 
-The user may provide a reference, exact assets and exact copy. Analyse those inputs first. Do not force the user through concept selection when they have already supplied a clear visual direction and said to create it.
+## Path A — reference-led senior graphic designer
+Analyse the reference in detail: composition, focal point, hierarchy, object positions, scale, typography, palette, background, lighting, texture, depth, framing and density. Identify every meaningful object. Build an object map and ask the user for exact replacement photos/assets for any person, place, building, product, logo or other identity-critical object. If unavailable, ask what should replace it; if the user is unsure, suggest 2–3 context-appropriate options and wait for selection.
 
-## Reference analysis
+Ask whether to retain brand typography or reproduce the reference's typography treatment. If the user chooses reference typography, reproduce the style/effects but use the user's exact copy unless they explicitly ask to retain reference wording. Recreate the reference faithfully, then integrate the brand kit in a distinctive but restrained way. Do not turn a detailed reference into a generic template.
 
-Inspect:
-- composition, focal point, hierarchy and reading path;
-- relative position and scale of subjects;
-- colour distribution, contrast and palette;
-- background, texture, atmosphere and lighting;
-- display typeface character and effects;
-- depth, layering, overlap, framing and image treatment;
-- visual density, cultural context and emotional tone.
+## Path B — no-reference brand creative director
+Research the broad category and region using search, galleries, portfolios and campaign examples. Search widely and synthesize patterns from a broad result pool; inspect a representative set in detail and never fabricate research counts. Identify 3–5 useful design patterns, audience expectations, crowded visual territory, differentiation opportunities and an explicit OFF-LIMITS cliché list.
 
-Produce an internal retain / replace / remove / add / locked map. Explain it briefly only when useful. If the user says “same style”, follow the reference closely rather than treating it as loose inspiration.
+Generate ten distinct directions. Score them, present the best three and ask the user to choose one. Do not proceed to production until selection unless the user delegates.
 
-## Concept selection
-
-Offer 2–3 concepts only when the direction is genuinely open. If the user has supplied a strong reference and complete brief, proceed directly with one faithful execution. Do not waste turns presenting superficial variations.
-
-## Art direction quality
-
-A concept must describe a coherent scene and visual story, not a list of unrelated decorations. Define how foreground, middle ground and background relate. Give every major element a reason and position. Avoid random flourishes and generic AI styling.
-
-## Production route
-
-Choose image-generation-first for complex expressive scenes, editable-design-first for precision-heavy layouts, and hybrid for artistic scenes with exact text/logo requirements. The chosen tool must fit the output, not the other way around.
+## Production
+Choose image-generation-first for expressive artwork, editable-design-first for exact text/layout, or hybrid for artistic imagery plus precise typography and logos. Define one coherent visual story, clear hierarchy, composition, typography and image treatment. Preserve exact identity assets and supplied copy. Never copy competitor artwork, logos, trade dress or distinctive layouts.

@@ -11,6 +11,12 @@
   "print_dpi": 300,
   "production_modes": {
     "auto_select": true,
+    "brand_first_wizard": true,
+    "brand_kit_required": false,
+    "logo_required": false,
+    "research_comparable_brands_for_every_new_poster": true,
+    "concept_ideas_per_poster": 10,
+    "concept_shortlist_size": 3,
     "primary_objective": "reference-led artistic image generation",
     "image_generation_first_for_visual_artwork": true,
     "editable_design_first_for_text_heavy_or_repeated_templates": true,
@@ -63,6 +69,7 @@
   "iteration": {
     "preserve_previous_versions": true,
     "require_explicit_final_approval": true,
+    "ideas_generated": 10,
     "max_initial_concepts": 3
   },
   "quality": {
@@ -78,7 +85,13 @@
     "unknown_is_not_pass": true,
     "automatic_fail_on_wrong_logo_or_required_asset": true,
     "do_not_silently_rewrite_user_copy": true,
-    "require_user_approval_after_qa_pass": true
+    "require_user_approval_after_qa_pass": true,
+    "require_mobile_feed_and_thumbnail_readability": true,
+    "require_accessibility_and_contrast_review": true,
+    "require_sentence_selection_and_semantic_review": true,
+    "require_brand_registry_identity_verification": true,
+    "require_independent_rework_until_pass": true,
+    "show_to_user_only_after_qa_pass": true
   },
   "design_capabilities": {
     "canvas_design": true,
@@ -100,5 +113,39 @@
     "use_iteration_manager_for_revisions": true,
     "use_quality_reviewer_as_independent_gate": true,
     "route_algorithmic_art_canvas_design_adobe_templates_and_skill_collection_when_relevant": true
+  },
+  "brand_onboarding": {
+    "search_workspace_registry_before_creation": true,
+    "require_user_consent_before_creation": true,
+    "default_brand": null,
+    "bundled_client_brand": false,
+    "ask_for": [
+      "official_name",
+      "address",
+      "recurring_branding_text",
+      "tagline",
+      "logo",
+      "website"
+    ],
+    "if_no_website_request_recent_poster": true,
+    "allow_optional_fields_to_be_skipped": true,
+    "save_kit_to_active_workspace": true,
+    "reload_saved_kit_before_design": true,
+    "mark_provenance_and_confidence": true
+  },
+  "reference_workflow": {
+    "classify_every_meaningful_object": true,
+    "request_exact_user_assets_for_identity_critical_objects": true,
+    "ask_user_what_to_do_when_asset_missing": true,
+    "suggest_two_or_three_alternatives_if_user_unsure": true,
+    "ask_brand_typography_or_reference_typography": true,
+    "preserve_reference_composition_and_visual_language": true,
+    "no_reference_uses_broad_category_research": true,
+    "broad_research_never_fabricates_review_counts": true,
+    "concepts_without_reference": {
+      "generate": 10,
+      "shortlist": 3,
+      "user_selects": true
+    }
   }
 }

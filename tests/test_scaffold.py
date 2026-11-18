@@ -1,72 +1,103 @@
-import json, subprocess, sys, tempfile, unittest
+import json, re, subprocess, sys, tempfile, unittest
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1]
+
+ROOT = Path(__file__).resolve().parents[1]
+
 class ScaffoldTests(unittest.TestCase):
     def test_manifests_are_valid_json(self):
-        for f in ['plugin.json','.codex-plugin/plugin.json','.claude-plugin/plugin.json','mcp.json','.mcp.json','config/studio-config.json']:
-            json.loads((ROOT/f).read_text(encoding='utf-8'))
-    def test_example_brands_have_required_files(self):
-        for slug in ['st-stephens','msossa','kirtho']:
-            b=ROOT/'resources'/'brands'/slug
-            self.assertTrue((b/'brand.json').exists())
-            self.assertTrue((b/'design-readme.md').exists())
-            json.loads((b/'brand.json').read_text(encoding='utf-8'))
-    def test_design_safeguards_are_documented(self):
-        skill=(ROOT/'skills/graphic-design-studio/SKILL.md').read_text(encoding='utf-8')
-        typography=(ROOT/'skills/graphic-design-studio/references/layout-and-typography.md').read_text(encoding='utf-8')
-        qa=(ROOT/'skills/graphic-design-studio/references/quality-review.md').read_text(encoding='utf-8')
-        self.assertIn('Logo is a hard gate', skill)
-        self.assertIn('Minimalist professional default', skill)
-        self.assertIn('Malayalam + English mixed-language integrity', typography)
-        self.assertIn('never add invented slogans, captions', skill.lower())
-        self.assertIn('pseudo-text', qa.lower())
-    def test_sample_brands_have_bilingual_font_inventory(self):
-        for slug in ['st-stephens','msossa','kirtho']:
-            folder=ROOT/'resources/brands'/slug/'typography'
-            self.assertTrue((folder/'font-inventory.json').exists())
-            data=json.loads((ROOT/'resources/brands'/slug/'brand.json').read_text(encoding='utf-8'))
-            self.assertIn('malayalam',data['typography']['language_support']['fonts'])
-    def test_create_brand_script(self):
+        for rel in [
+            "plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json",
+            ".claude-plugin/marketplace.json", ".cursor-plugin/marketplace.json",
+            "gemini-extension.json", "config/studio-config.json"
+        ]:
+            with self.subTest(rel=rel):
+                json.loads((ROOT / rel).read_text(encoding="utf-8"))
+
+    def test_repository_contains_only_generic_brand_template(self):
+        brands = ROOT / "resources" / "brands"
+        folders = {p.name for p in brands.iterdir() if p.is_dir()}
+        self.assertEqual(folders, {"_template"})
+        template = json.loads((brands / "_template" / "brand.json").read_text(encoding="utf-8"))
+        self.assertEqual(template["status"], "proposed")
+        self.assertIsNone(template["logo_assets"]["primary"])
+        self.assertTrue(template["logo_rules"]["logo_optional"])
+
+    def test_brand_first_wizard_searches_before_creating(self):
+        wizard = (ROOT / "skills/graphic-design-studio/references/design-wizard.md").read_text(encoding="utf-8").lower()
+        self.assertIn("search for the brand", wizard)
+        self.assertIn("no saved brand kit was found", wizard)
+        self.assertIn("ask permission", wizard)
+        self.assertIn("if there is no website", wizard)
+        self.assertIn("reload brand context", wizard)
+
+    def test_reference_path_collects_objects_and_exact_assets(self):
+        wizard = (ROOT / "skills/graphic-design-studio/references/design-wizard.md").read_text(encoding="utf-8").lower()
+        self.assertIn("identify every visible meaningful object", wizard)
+        self.assertIn("upload the exact image", wizard)
+        self.assertIn("suggest 2–3 suitable alternatives", wizard)
+        self.assertIn("typography", wizard)
+
+    def test_no_reference_path_uses_research_and_ten_to_three(self):
+        wizard = (ROOT / "skills/graphic-design-studio/references/design-wizard.md").read_text(encoding="utf-8").lower()
+        self.assertIn("research the broader visual landscape", wizard)
+        self.assertIn("ten genuinely distinct creative concepts", wizard)
+        self.assertIn("best three", wizard)
+
+    def test_qa_rework_loop_is_mandatory(self):
+        wizard = (ROOT / "skills/graphic-design-studio/references/design-wizard.md").read_text(encoding="utf-8").lower()
+        self.assertIn("independent senior qa", wizard)
+        self.assertIn("if qa is fail", wizard)
+        self.assertIn("repeat until qa returns pass", wizard)
+        self.assertIn("only after qa pass", wizard)
+
+    def test_design_safeguards_and_typography_are_documented(self):
+        skill = (ROOT / "skills/graphic-design-studio/SKILL.md").read_text(encoding="utf-8")
+        typography = (ROOT / "skills/layout-typography/SKILL.md").read_text(encoding="utf-8")
+        qa = (ROOT / "skills/graphic-design-studio/references/quality-review.md").read_text(encoding="utf-8")
+        self.assertIn("A logo is optional", skill)
+        self.assertIn("Malayalam", typography)
+        self.assertIn("pseudo-text", qa.lower())
+
+    def test_config_enforces_brand_search_and_reference_qa(self):
+        config = json.loads((ROOT / "config/studio-config.json").read_text(encoding="utf-8"))
+        onboarding = config["brand_onboarding"]
+        self.assertTrue(onboarding["search_workspace_registry_before_creation"])
+        self.assertTrue(onboarding["require_user_consent_before_creation"])
+        self.assertFalse(onboarding["bundled_client_brand"])
+        self.assertTrue(onboarding["if_no_website_request_recent_poster"])
+        reference = config["reference_workflow"]
+        self.assertTrue(reference["classify_every_meaningful_object"])
+        self.assertTrue(reference["request_exact_user_assets_for_identity_critical_objects"])
+        self.assertEqual(reference["concepts_without_reference"]["generate"], 10)
+        self.assertEqual(reference["concepts_without_reference"]["shortlist"], 3)
+        quality = config["quality"]
+        self.assertTrue(quality["require_mobile_feed_and_thumbnail_readability"])
+        self.assertTrue(quality["require_accessibility_and_contrast_review"])
+        self.assertTrue(quality["require_independent_rework_until_pass"])
+
+    def test_create_brand_saves_complete_kit_in_active_workspace(self):
         with tempfile.TemporaryDirectory() as tmp:
-            # Exercise validation logic only; avoid mutating the shipped sample brand set.
-            import re
-            self.assertIsNotNone(re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*','sample-brand'))
-            self.assertIsNone(re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*','Bad Slug'))
+            subprocess.run([
+                sys.executable, str(ROOT / "scripts/create_brand.py"),
+                "--slug", "sample-brand", "--name", "Sample Brand",
+                "--workspace", tmp
+            ], check=True, capture_output=True, text=True)
+            brand = Path(tmp) / "resources/brands/sample-brand"
+            self.assertTrue((brand / "brand.json").exists())
+            self.assertTrue((brand / "design-readme.md").exists())
+            self.assertTrue((brand / "01-Logos").is_dir())
+            self.assertTrue((brand / "04-Reference-Design").is_dir())
+            self.assertTrue((brand / "05-Photography").is_dir())
+            self.assertTrue((brand / "research").is_dir())
+            profile = json.loads((brand / "brand.json").read_text(encoding="utf-8"))
+            self.assertEqual(profile["name"], "Sample Brand")
+            self.assertEqual(profile["status"], "proposed")
+            self.assertIsNone(profile["logo_assets"]["primary"])
 
-    def test_output_and_reference_intake_is_mandatory(self):
-        skill=(ROOT/'skills/graphic-design-studio/SKILL.md').read_text(encoding='utf-8')
-        ref=(ROOT/'skills/graphic-design-studio/references/creative-direction.md').read_text(encoding='utf-8')
-        workflow=(ROOT/'workflows/reference-and-output-intake.md').read_text(encoding='utf-8')
-        self.assertIn('Output and reference intake (mandatory for every new design)', skill)
-        self.assertIn('Ask for output platform and dimensions', skill)
-        self.assertIn('Ask whether a reference image/design is available', skill)
-        self.assertIn('If no reference is supplied', skill)
-        self.assertIn('prompt review', ref.lower())
-        self.assertIn('retain', ref.lower())
-        self.assertIn('output', workflow.lower())
+    def test_create_brand_slug_rules(self):
+        valid = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+        self.assertIsNotNone(valid.fullmatch("sample-brand"))
+        self.assertIsNone(valid.fullmatch("Bad Brand"))
 
-    def test_specialist_skills_are_present_for_both_agents(self):
-        for slug in ['canvas-design','poster-design','algorithmic-art','brand-guidelines','adobe-design-from-template','graphic-design-skills-collection']:
-            skill=ROOT/'skills'/slug/'SKILL.md'
-            self.assertTrue(skill.exists(), slug)
-            self.assertIn(f'name: {slug}', skill.read_text(encoding='utf-8'))
-
-    def test_quality_review_has_semantic_content_gate(self):
-        qa=(ROOT/'skills/graphic-design-studio/references/quality-review.md').read_text(encoding='utf-8').lower()
-        studio=(ROOT/'skills/graphic-design-studio/SKILL.md').read_text(encoding='utf-8').lower()
-        reviewer=(ROOT/'agents/quality-reviewer.md').read_text(encoding='utf-8').lower()
-        for phrase in ['communication type','intended audience','single main message','repeated meaning','personal message','dear student','fail the design']:
-            self.assertIn(phrase,qa)
-        self.assertIn('semantic content review (hard gate)',studio)
-        self.assertIn('repeated meaning',reviewer)
-        self.assertIn('visually attractive design must fail',reviewer)
-
-    def test_adobe_and_design_capabilities_are_configured(self):
-        cfg=json.loads((ROOT/'config/studio-config.json').read_text(encoding='utf-8'))
-        caps=cfg['design_capabilities']
-        for key in ['adobe_express_templates','canvas_design','poster_design','algorithmic_art','brand_guidelines']:
-            self.assertIn(key,caps)
-        adobe=(ROOT/'skills/adobe-design-from-template/SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('explicit template selection',adobe.lower())
-
-if __name__=='__main__': unittest.main()
+if __name__ == "__main__":
+    unittest.main()

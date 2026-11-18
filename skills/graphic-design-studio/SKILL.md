@@ -11,6 +11,14 @@ Work like a senior art director, image-maker, designer and production lead. The 
 
 **Reference = visual direction. Uploaded assets = identity. Supplied text = content.** All three must be honoured together. Do not sacrifice the reference's style to preserve assets, and do not sacrifice identity to imitate the reference. Compose the design around the correct assets and visual language.
 
+## The professional design wizard
+
+For every new design, follow `references/design-wizard.md`. The wizard is conversational: one stage at a time, no giant intake form, no repeated questions, and users may answer "skip", "not available" or "choose for me".
+
+**Default stage order:** identify brand → search its workspace brand folder → create a brand kit only with user permission if absent → reload/read the saved kit → ask what to design and output size → reference-led replication OR research-led creative direction → production → independent senior QA → designer rework until PASS → user approval/export.
+
+Brand registry is independent and empty by default. Search the active workspace's `resources/brands/` registry by normalized brand name/slug before onboarding. If no match exists, state that no brand kit was found and ask whether the user wants to create one. Never bundle a client/example brand or assume a default brand. Create a kit only after confirmation, using the user's details, logo and website; if there is no website, request an existing poster/reference as visual evidence. A logo is optional and must never be fabricated. Distinguish confirmed, inferred and unknown rules.
+
 ## Non-negotiable rules
 
 1. Never invent event facts, dates, names, venues, prices, URLs, scripture or contact details.
@@ -38,13 +46,13 @@ Read the current conversation and inspect all uploaded images before asking anyt
 - output platform and dimensions;
 - any locked or prohibited changes.
 
-Ask only for missing essentials. If a user uploads images and says what text to show, proceed with that. Do not ask them to repeat known information. If dimensions are absent and materially matter, ask one concise question; otherwise suggest a suitable standard and state the assumption.
+Follow the staged wizard: establish/review the brand kit first, then collect poster requirements and size. Ask only for missing essentials, one stage at a time. Reuse known information. Recommend a standard size for the intended platform when the user is unsure and obtain confirmation before fixed-size production.
 
-## Step 2 — Classify the images
+## Step 2 — Classify reference objects and collect exact assets
 
-Create a simple asset map. Classify each upload as style reference, composition reference, exact logo, exact subject, photo/background, content reference or supporting asset. A single upload can have multiple roles. Record exact filenames or attachment references when available.
+Create an object-by-object map of every supplied reference: people, buildings, products, vehicles, clothing, props, symbols, logos, text panels, backgrounds and decorative elements. Classify each as retain, replace, remove or recreate. Ask the user to upload the exact image for every object that must depict their real brand/person/place/product. For each missing object, ask what should appear instead. If the user is unsure or delegates, suggest 2–3 context-appropriate alternatives and wait for selection before replacing identity-critical objects. Never invent a lookalike for an exact subject.
 
-Never assume that the image used as a style reference is also an asset to reproduce. Never assume that a brand-kit image is the visual reference. Keep those roles separate.
+Keep style references separate from exact assets. A single upload may serve both roles, but record them independently. Ask for missing exact assets only after explaining which object they are needed for.
 
 ## Step 3 — Analyse the reference
 
@@ -62,18 +70,25 @@ Write an internal reference map: `retain`, `replace`, `remove`, `add`, `locked`.
 
 ## Step 4 — Brand and asset audit
 
-Load the selected brand profile, logo inventory, palette, fonts, relevant references and assets. Use the actual folder structure; do not assume generic paths. For St. Stephen, check `resources/brands/ststephen/01-Logos/`, `03-Typography/`, and `04-Reference-Design/` including its photography folder.
+Search the workspace brand registry for the selected brand and load its `brand.json`, `design-readme.md`, palette, typography inventory, logo and references. If the user has just created a kit, save it, re-read the saved files and confirm the loaded brand name before continuing. Do not rely on stale conversation assumptions. Use the actual folder structure; never assume a folder or asset exists.
 
 Record:
 - exact logo file and whether it must remain pixel-identical;
+- whether display typography should retain the brand font or follow the reference's typography treatment (ask the user when not specified);
 - exact subject files and defining details to preserve;
 - allowed transformations (normally uniform scale, position and careful colour integration only);
 - fonts and palette;
 - source and role of each reference.
 
-If a required logo or identity asset is missing, ask for it. Do not invent a replacement.
+A logo is optional. Never invent or approximate an official logo; omit it or reserve a position only when requested. If a required identity-critical subject (person, building, product) is missing, ask for the source or disclose the limitation rather than inventing a substitute.
 
-## Step 5 — Select the production route
+## Step 5 — Choose the correct creative path
+
+**When a reference is supplied:** act as a senior graphic designer. Recreate its visual language and composition faithfully using the saved brand kit. Do not force the ten-concept exercise. Identify every object and ask for the user's exact replacement images. Resolve missing assets and typography choice before production. Integrate brand colours, logo and recurring identity in a deliberate way without damaging the reference's visual character.
+
+**When no reference is supplied:** act as a brand creative director. Follow `references/brand-research.md`: research broadly across the category, region, audience and occasion using available search and design sources; synthesize the wider competitive landscape, then inspect a representative set of strong examples in detail. Never claim to have reviewed thousands of individual posters unless that actually happened. Create an OFF-LIMITS cliché list. Generate ten genuinely different directions, score them, and present the strongest three. Ask the user to choose one unless they delegate. Never copy competitor artwork, logos, trade dress or distinctive layouts.
+
+## Step 6 — Select the production route
 
 Choose based on the actual task:
 
@@ -85,7 +100,7 @@ Choose based on the actual task:
 
 Discover current tools dynamically. Do not assume image generation, Canva, Adobe or API credentials are available. If a route is unavailable, explain the limitation and choose the best supported alternative.
 
-## Step 6 — Build the production prompt
+## Step 7 — Build the production prompt
 
 Use `references/prompt-architecture.md`. The prompt must contain:
 1. output format and dimensions;
@@ -101,7 +116,7 @@ Use `references/prompt-architecture.md`. The prompt must contain:
 
 Do not merely append “use attached images”. Describe what each image represents and where it belongs. For a complex visual poster, ask the image model for one cohesive finished artwork. If precise text/logo is likely to fail, omit those elements from the generated image and finish them separately.
 
-## Step 7 — Generate and finish
+## Step 8 — Generate and finish
 
 1. Pass the actual reference and relevant asset images to the image-generation tool when its interface supports image references.
 2. Use one strong, complete art direction rather than producing disconnected cutouts.
@@ -111,13 +126,13 @@ Do not merely append “use attached images”. Describe what each image represe
 6. Match lighting, colour temperature, perspective, scale, shadows, atmospheric depth and overlap. Ensure all elements belong to one scene.
 7. Keep the source artwork and editable finishing layers when the renderer supports them.
 
-## Step 8 — Typography and exact copy
+## Step 9 — Typography and exact copy
 
 When a style reference exists, its display typography controls expressive titles, anniversary numerals, ribbons and decorative headings. Use the closest available font and reproduce the visible style with layered gradients, outlines, bevel, extrusion, shadow and ornament. Use brand fonts for supporting text and as the default only when there is no reference typography.
 
 Keep the exact copy in a separate locked content block. Never silently translate, paraphrase, shorten or add words. For Malayalam, verify glyph coverage, conjunct shaping, chillu letters, vowel signs, combining marks and line wrapping in the actual export. Never break words or detach diacritics.
 
-## Step 9 — Independent QA before user approval
+## Step 10 — Independent QA before user approval
 
 The quality reviewer is an independent gate, not the designer checking their own work. Read `references/quality-review.md` and inspect the actual rendered artwork and export, not only the prompt or tool-success message. Use the `quality-reviewer` agent when the host supports agents. Record PASS / FAIL / UNKNOWN with evidence. UNKNOWN is not PASS.
 
@@ -152,7 +167,7 @@ The quality reviewer is an independent gate, not the designer checking their own
 
 Any critical failure blocks approval. Fix it, regenerate or revise only the affected parts, and repeat the relevant QA. Do not show a failed draft as final. If a limitation cannot be fixed, disclose it and keep the result marked as not approved.
 
-## Step 10 — Present the QA-approved artwork for user approval
+## Step 11 — Present the QA-approved artwork for user approval
 
 Only after all pre-Canva QA categories pass:
 1. Save the QA report and immutable preview/export version.
@@ -160,7 +175,7 @@ Only after all pre-Canva QA categories pass:
 3. Ask the user to approve the artwork or request changes. QA approval and user approval are separate gates.
 4. If the user requests changes, use the iteration manager workflow, preserve accepted elements, create a new version and repeat QA. Do not proceed to Canva until the user explicitly approves the artwork.
 
-## Step 11 — Mandatory Canva editable delivery after approval
+## Step 12 — Mandatory Canva editable delivery after approval
 
 Once (and only once) the artwork has passed independent QA **and** the user explicitly approves that artwork, create a new Canva design from it. Canva is the required final editable handoff, not the primary generator for the artistic composition.
 
@@ -176,7 +191,7 @@ Once (and only once) the artwork has passed independent QA **and** the user expl
 10. Return the Canva edit URL and preview, plus the approved flattened export. State clearly which components are editable and which remain flattened image layers. Never claim every element is editable if the artistic background is a single raster image.
 11. If Canva tools require a transaction or commit, follow their approval model. The user's approval of the artwork authorizes creation of the new Canva handoff, but does not authorize destructive edits to an existing design.
 
-## Step 12 — Versioning and final delivery
+## Step 13 — Versioning and final delivery
 
 Save the original generated artwork, finishing assets, pre-Canva QA report, user approval, Canva design ID/edit URL, Canva preview, post-Canva QA report and final exports under the project folder. Preserve immutable versions. Final delivery includes:
 - QA-approved artwork export;

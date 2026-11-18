@@ -1,26 +1,11 @@
 {
-  "status": "draft",
-  "note": "Replace all proposed tokens with confirmed brand colours before production.",
+  "status": "proposed",
+  "note": "Colour values inferred from supplied assets or a website remain proposed until user approval.",
   "colors": {
-    "primary": {
-      "hex": "#1F2937",
-      "usage": "Primary brand colour; confirm before use."
-    },
-    "secondary": {
-      "hex": "#64748B",
-      "usage": "Supporting colour; confirm before use."
-    },
-    "accent": {
-      "hex": "#D97706",
-      "usage": "Accent only; confirm before use."
-    },
-    "background": {
-      "hex": "#FFFFFF",
-      "usage": "Neutral background."
-    },
-    "text": {
-      "hex": "#111827",
-      "usage": "Primary text."
-    }
+    "primary": {"hex": "", "usage": "Proposed primary brand colour.", "confidence": "unknown", "source": ""},
+    "secondary": {"hex": "", "usage": "Proposed supporting colour.", "confidence": "unknown", "source": ""},
+    "accent": {"hex": "", "usage": "Proposed accent colour.", "confidence": "unknown", "source": ""},
+    "background": {"hex": "", "usage": "Suggested background neutral.", "confidence": "unknown", "source": ""},
+    "text": {"hex": "", "usage": "Suggested text colour.", "confidence": "unknown", "source": ""}
   }
 }

@@ -1,18 +1,46 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "brand-slug",
   "name": "Brand Name",
-  "description": "Short description of the organization or brand.",
-  "status": "draft",
+  "description": "",
+  "status": "proposed",
   "industry": "",
   "website": "",
-  "voice": [
-    "clear",
-    "welcoming"
-  ],
+  "audience": "",
+  "positioning": "",
+  "tagline": "",
+  "address": "",
+  "contact": {
+    "phone": "",
+    "email": "",
+    "url": "",
+    "social": []
+  },
+  "recurring_brand_text": [],
+  "source_provenance": {
+    "method": "interview",
+    "website_pages": [],
+    "reference_assets": [],
+    "created_at": null,
+    "last_reviewed": null
+  },
+  "confidence": {
+    "identity": "unknown",
+    "palette": "unknown",
+    "typography": "unknown",
+    "imagery": "unknown",
+    "voice": "unknown"
+  },
+  "approval": {
+    "status": "not-reviewed",
+    "approved_by_user": false,
+    "approved_at": null,
+    "notes": ""
+  },
+  "voice": [],
   "palette_file": "palette/palette.json",
   "logo_assets": {
-    "primary": "logos/primary.svg",
+    "primary": null,
     "monochrome": null,
     "reversed": null,
     "icon_only": null
@@ -57,7 +85,7 @@
           "family": "",
           "files": [],
           "weights": [],
-          "verified_shaping": true
+          "verified_shaping": false
         }
       },
       "mixed_language_rules": "Preserve full phrases and natural sentence flow. Never split words or detach Malayalam combining marks."
@@ -67,24 +95,21 @@
     "do_not_modify": true,
     "clear_space": "",
     "minimum_size": "",
-    "backgrounds": ""
+    "backgrounds": "",
+    "logo_optional": true
   },
   "design_rules": {
-    "preferred_styles": [
-      "minimalist",
-      "editorial",
-      "restrained",
-      "high-whitespace"
-    ],
+    "preferred_styles": [],
     "avoid": [
-      "Cluttered AI-generated poster aesthetics",
       "Random decorative text, labels or filler",
       "Unrequested slogans, captions or pseudo-text",
       "Broken Malayalam or English sentence wrapping"
     ],
     "photography": "",
-    "illustration": ""
+    "illustration": "",
+    "recurring_motifs": []
   },
   "required_disclaimers": [],
-  "last_reviewed": null
+  "last_reviewed": null,
+  "branding_text": []
 }
